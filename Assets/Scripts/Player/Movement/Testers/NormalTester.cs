@@ -10,6 +10,10 @@ public class NormalTester : MonoBehaviour
     private PlayerMovement playerMovement;
     [SerializeField]
     private float maxAngle = 90;
+    [SerializeField]
+    private bool useAverage = false;
+
+    private float rootMaxAngle;
 
 	void Start ()
 	{
@@ -17,12 +21,24 @@ public class NormalTester : MonoBehaviour
 
         collider = GetComponent<Collider2D>();
         Debug.Assert(collider != null, "could not find player collider");
+        rootMaxAngle = maxAngle;
 	}
 
 	private void OnDisable()
 	{
         others.RemoveAll(g => true);
 	}
+
+    private float GetAngle(float avg, float shortest)
+    {
+        return useAverage ? avg : shortest;
+    }
+
+    public void MakeSticky(bool isSticky)
+    {
+        maxAngle = isSticky ? 360 : rootMaxAngle;
+        useAverage = isSticky;
+    }
 
 	void FixedUpdate ()
     {
@@ -40,7 +56,7 @@ public class NormalTester : MonoBehaviour
             Debug.DrawLine(transform.position, transform.position + new Vector3(distance2D.normal.x, distance2D.normal.y, 0), Color.black);
             if (angle < 0) angle += 360;
             if (angle > 180) angle -= 360;
-            angles += "/" + angle;
+            angles += "/[" + angle + " " + o.name+ "]";
             if (Mathf.Abs(angle - 90) <= maxAngle)
             {
                 avg += (angle - 90);
@@ -58,17 +74,18 @@ public class NormalTester : MonoBehaviour
 
         if (avgCnt == 0)
         {
-            //Debug.Log(transform.parent.gameObject.name + " no normals: ");
+            Debug.Log(transform.parent.gameObject.name + " no normals: ");
             transform.parent.rotation = Quaternion.Euler(0, 0, 0);
+            playerMovement.Normal = Vector3.zero;
             return;
         }
-        // Debug.Log(angles);
+        Debug.Log(angles);
         if (avgCnt > 0) avg = avg / avgCnt;
 
-        transform.parent.rotation = Quaternion.Euler(0, 0, dirtyShortestAngle /* avg */);
+        transform.parent.rotation = Quaternion.Euler(0, 0, GetAngle(avg, dirtyShortestAngle));
         if(playerMovement != null)
-            playerMovement.Normal = Quaternion.Euler(0, 0, /* avg */ dirtyShortestAngle + 90) * Vector3.right; // FIXME
-        //Debug.Log(transform.parent.gameObject.name + " normals: " + avg + "/" + avgCnt);
+            playerMovement.Normal = Quaternion.Euler(0, 0, GetAngle(avg, dirtyShortestAngle) + 90) * Vector3.right; // FIXME
+        Debug.Log(transform.parent.gameObject.name + " normals: " + (avg + 90) + "/" + avgCnt + "/" + playerMovement.Normal);
 	}
 
     void OnTriggerEnter2D (Collider2D other)
