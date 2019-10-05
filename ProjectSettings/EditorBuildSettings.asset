@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Dirty/PlayerCountJoystick.unity
+    guid: 81534c554ba80456ebd2fc70ed59db4c
+  - enabled: 1
+    path: Assets/Scenes/Dirty/FactionSelectorJoystick.unity
+    guid: c185b39d7afee48a2904264805367faa
+  - enabled: 1
+    path: Assets/Scenes/Dirty/FighterSelectorJoystick.unity
+    guid: 9926a9a8cfdba4489817977d7ece7268
+  - enabled: 1
+    path: Assets/Scenes/Dirty/LevelSelectorJoystick.unity
+    guid: a8a0e854d870045c09052565fc9dca87
+  - enabled: 1
+    path: Assets/Scenes/Level Open.unity
+    guid: 8c7fdc11167280c4899acd05d37513a7
+  - enabled: 1
+    path: Assets/Scenes/Level Standard.unity
+    guid: 14b74596e8663468abcaf71ca0172613
+  - enabled: 0
+    path: Assets/Scenes/Dirty/FighterSelector.unity
+    guid: 45aa7ee4ef34e45e08f53b85d6260861
+  - enabled: 0
+    path: Assets/Scenes/Dirty/FactionSelector.unity
+    guid: d0db1e50207f249149fec998c84029a4
+  - enabled: 0
+    path: Assets/Scenes/SampleScene.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 0
+    path: Assets/Scenes/LevelTestFlat.unity
+    guid: f33fa7e2950eb4c14b3f84cd5fa7dcf8
+  m_configObjects: {}

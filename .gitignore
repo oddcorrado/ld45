@@ -6,3 +6,6 @@ obj
 Build
 Packages
 .DS_Store
+Assembly-CSharp-Editor.csproj
+Assembly-CSharp.csproj
+ld45.sln
