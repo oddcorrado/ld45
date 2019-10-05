@@ -53,11 +53,22 @@ public class PlayerMovementGroundSticky : PlayerMovement
     protected bool inJump = false;
     protected bool inWallJump = false;
     protected GroundTester groundTester;
+    protected NormalTester normalTester;
     protected float horLock;
     private Vector3 jumpNormal;
 
     public float WalkGroundSpeed { get { return walkGroundSpeed; } set { walkGroundSpeed = value; } }
+    public bool IsSticky
+    {
+        get { return isSticky;  }
+        set
+        {
+            if (value == isSticky) return;
+            isSticky = value;
 
+            normalTester.MakeSticky(isSticky);
+        }
+    }
     override protected void Start()
     {
         base.Start();

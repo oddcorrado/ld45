@@ -13,12 +13,15 @@ public class NormalTester : MonoBehaviour
     [SerializeField]
     private bool useAverage = false;
 
+    private float rootMaxAngle;
+
 	void Start ()
 	{
         playerMovement = transform.parent.gameObject.GetComponent<PlayerMovement>();
 
         collider = GetComponent<Collider2D>();
         Debug.Assert(collider != null, "could not find player collider");
+        rootMaxAngle = maxAngle;
 	}
 
 	private void OnDisable()
@@ -29,6 +32,12 @@ public class NormalTester : MonoBehaviour
     private float GetAngle(float avg, float shortest)
     {
         return useAverage ? avg : shortest;
+    }
+
+    public void MakeSticky(bool isSticky)
+    {
+        maxAngle = isSticky ? 360 : rootMaxAngle;
+        useAverage = isSticky;
     }
 
 	void FixedUpdate ()
