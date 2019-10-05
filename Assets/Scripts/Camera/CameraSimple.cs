@@ -8,6 +8,7 @@ public class CameraSimple: MonoBehaviour
     public float offsetX=3;
     public float offsetY = 2;
     private Camera cam;
+    private float f = 1;
     PlayerMovementGroundSticky playerMovementGroundSticky;
     // Start is called before the first frame update
     void Start()
@@ -18,10 +19,10 @@ public class CameraSimple: MonoBehaviour
 
     // Update is called once per frame
 
-    void Update()
+    void Update()   
     {
         Vector3 position = transform.position;
-        float f = playerMovementGroundSticky.SizeMul;
+        f = playerMovementGroundSticky.SizeMul;
 
         if (player == null) return;
 
