@@ -103,7 +103,7 @@ public class AiMovement : AiMovementBase
 
     protected virtual Vector3 Horizontal(Vector3 vel, float hor)
     {
-        Debug.Log(vel + " " + hor);
+        // Debug.Log(vel + " " + hor);
 
         var newVel = Vector3.zero;
 

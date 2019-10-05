@@ -18,8 +18,8 @@ public class BlobEat : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Preys.Count > 0)
-        Debug.Log(Preys["test"]);
+        //if(Preys.Count > 0)
+        //  Debug.Log(Preys["test"]);
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {

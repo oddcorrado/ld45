@@ -57,6 +57,17 @@ public class PlayerMovementGroundSticky : PlayerMovement
     protected float horLock;
     private Vector3 jumpNormal;
 
+    private float sizeMul = 1;
+    public float SizeMul
+    {
+        get { return sizeMul; }
+        set 
+        {
+            if (Mathf.Abs(sizeMul-value) <= Mathf.Epsilon) return;
+            sizeMul = value;
+            transform.localScale = new Vector2(sizeMul, sizeMul);
+        }
+    }
     public float WalkGroundSpeed { get { return walkGroundSpeed; } set { walkGroundSpeed = value; } }
     public bool IsSticky
     {
@@ -326,21 +337,22 @@ public class PlayerMovementGroundSticky : PlayerMovement
             }
             else
             {
-                // Debug.Log("normalTester.SurfaceCount" + normalTester.SurfaceCount);
+                
                 if (/* Mathf.Abs(input.X) < 0.1f && */ input.Y < -0.5f) // && normalTester.SurfaceCount < 2)
                 {
+                    Debug.Log("normalTester.SurfaceCount" + normalTester.SurfaceCount);
                     groundTester.Traverse();
                     if(transform.localScale.y > 0.5f)
                         transform.localScale += new Vector3(0.05f * Mathf.Sign(transform.localScale.x), -0.05f, 1);
                 }
                 else
                 {
-                    Debug.Log("grow " + Time.time);
-                    if (transform.localScale.y < 1)
+                    // Debug.Log("grow " + Time.time);
+                    if (transform.localScale.y < sizeMul)
                         // transform.localScale = Vector3.one;
                         transform.localScale += new Vector3(-0.05f * Mathf.Sign(transform.localScale.x), 0.05f, 1);
                     else
-                        transform.localScale = new Vector3(1 * Mathf.Sign(transform.localScale.x), 1, 1);
+                        transform.localScale = new Vector3(1 * Mathf.Sign(transform.localScale.x), 1, 1) * sizeMul;
                 }   
             }
         }
