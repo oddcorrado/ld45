@@ -77,7 +77,7 @@ public class NormalTester : MonoBehaviour
         {
             // Debug.Log(transform.parent.gameObject.name + " no normals: ");
             transform.parent.rotation = Quaternion.Euler(0, 0, 0);
-            playerMovement.Normal = Vector3.zero;
+            if(playerMovement != null) playerMovement.Normal = Vector3.zero;
             return;
         }
         // Debug.Log(angles);
