@@ -311,7 +311,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5934020635870149169}
   - component: {fileID: 5934020635870149175}
-  - component: {fileID: 5934020635870149174}
+  - component: {fileID: 9177216047303075946}
   m_Layer: 9
   m_Name: NormalTester
   m_TagString: Untagged
@@ -345,9 +345,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e359208ebd574f18a040c14e041deb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxAngle: 70
---- !u!58 &5934020635870149174
-CircleCollider2D:
+  maxAngle: 180
+  useAverage: 1
+--- !u!70 &9177216047303075946
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -360,8 +361,8 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.8
+  m_Size: {x: 1.6, y: 1.6}
+  m_Direction: 1
 --- !u!1 &5934020636853407740
 GameObject:
   m_ObjectHideFlags: 0
@@ -372,7 +373,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5934020636853407732}
   - component: {fileID: 4753835283507901591}
-  - component: {fileID: 5934020636853407728}
+  - component: {fileID: 5074163324401236655}
   - component: {fileID: 5934020636853407730}
   - component: {fileID: 5934020636853407741}
   - component: {fileID: 5934020636853407733}
@@ -432,7 +433,7 @@ MonoBehaviour:
   groundInertia: 0.1
   airInertia: 0.2
   multiJump: 1
-  isSticky: 0
+  isSticky: 1
   jumpDeltaTime: 0.16
   jumpPreWarmRatio: 0.5
   maxGravityVelocity: 8
@@ -444,8 +445,8 @@ MonoBehaviour:
   animationLedge: ledge
   animationLedgeJump: ledgeJump
   animationAir: air
---- !u!58 &5934020636853407728
-CircleCollider2D:
+--- !u!70 &5074163324401236655
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -458,8 +459,8 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.5
+  m_Size: {x: 1, y: 1}
+  m_Direction: 1
 --- !u!50 &5934020636853407730
 Rigidbody2D:
   serializedVersion: 4
