@@ -152,6 +152,7 @@ public class PlayerMovementSticky : PlayerMovement
                     vel.y = Mathf.Min(vel.y, -DiveVel);
                 }
             }
+
         }
         return vel;
     }

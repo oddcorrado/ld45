@@ -14,6 +14,7 @@ public class NormalTester : MonoBehaviour
     private bool useAverage = false;
 
     private float rootMaxAngle;
+    public int SurfaceCount { get; set; }
 
 	void Start ()
 	{
@@ -43,9 +44,9 @@ public class NormalTester : MonoBehaviour
 	void FixedUpdate ()
     {
         float avg = 0;
-        int avgCnt = 0;
         float dirtyShortestDistance = Mathf.Infinity;
         float dirtyShortestAngle = 90;
+        SurfaceCount = 0;
 
         string angles = "";
         others.RemoveAll(o => o == null);
@@ -60,7 +61,7 @@ public class NormalTester : MonoBehaviour
             if (Mathf.Abs(angle - 90) <= maxAngle)
             {
                 avg += (angle - 90);
-                avgCnt++;
+                SurfaceCount++;
 
                 if (dirtyShortestDistance > distance2D.distance)
                 {
@@ -72,20 +73,20 @@ public class NormalTester : MonoBehaviour
 
         });
 
-        if (avgCnt == 0)
+        if (SurfaceCount == 0)
         {
-            Debug.Log(transform.parent.gameObject.name + " no normals: ");
+            // Debug.Log(transform.parent.gameObject.name + " no normals: ");
             transform.parent.rotation = Quaternion.Euler(0, 0, 0);
             playerMovement.Normal = Vector3.zero;
             return;
         }
-        Debug.Log(angles);
-        if (avgCnt > 0) avg = avg / avgCnt;
+        // Debug.Log(angles);
+        if (SurfaceCount > 0) avg = avg / SurfaceCount;
 
         transform.parent.rotation = Quaternion.Euler(0, 0, GetAngle(avg, dirtyShortestAngle));
         if(playerMovement != null)
             playerMovement.Normal = Quaternion.Euler(0, 0, GetAngle(avg, dirtyShortestAngle) + 90) * Vector3.right; // FIXME
-        Debug.Log(transform.parent.gameObject.name + " normals: " + (avg + 90) + "/" + avgCnt + "/" + playerMovement.Normal);
+        // Debug.Log(transform.parent.gameObject.name + " normals: " + (avg + 90) + "/" + SurfaceCount + "/" + playerMovement.Normal);
 	}
 
     void OnTriggerEnter2D (Collider2D other)

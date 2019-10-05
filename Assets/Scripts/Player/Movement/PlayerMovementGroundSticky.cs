@@ -91,6 +91,9 @@ public class PlayerMovementGroundSticky : PlayerMovement
         groundTester = transform.Find("GroundTester")?.GetComponent<GroundTester>();
         Debug.Assert(groundTester != null, "could not find groundTester");
 
+        normalTester = transform.Find("NormalTester")?.GetComponent<NormalTester>();
+        Debug.Assert(normalTester != null, "could not find NormalTester");
+
         Debug.Log(name + " " + walkGroundSpeed);
 
         //Physics2D.gravity = Vector2.zero;
@@ -131,10 +134,21 @@ public class PlayerMovementGroundSticky : PlayerMovement
                 // Debug.DrawLine(transform.position + new Vector3(0, 0.2f, 0), transform.position + new Vector3(0, 0.2f, 0) + new Vector3(vel.x, vel.y, 0), Color.red);
                 Debug.DrawLine(transform.position, transform.position + new Vector3(newVel.x, newVel.y, 0), Color.white);
                 var gi = groundInertia <= Mathf.Epsilon ? 0f : 0.9f + groundInertia * 0.01f;
-                if(!isSticky)
-                    vel.x = newVel.x * (1 - gi) + vel.x * gi;
-                else
-                    vel = newVel * (1 - gi) + vel * gi;
+                // if (input.Y > -0.1f)
+                {
+                    if (!isSticky)
+                        vel.x = newVel.x * (1 - gi) + vel.x * gi;
+                    else
+                        vel = newVel * (1 - gi) + vel * gi; 
+                }
+                /* else
+                {
+                    if (!isSticky)
+                        vel.x = 0;
+                    else
+                        vel = Vector3.zero;
+                } */
+
                 // body.AddForce(new Vector2(newVel.x, 0));
 
                 if (Mathf.Abs(angle) > 2)
@@ -190,7 +204,7 @@ public class PlayerMovementGroundSticky : PlayerMovement
     protected virtual void ScaleXForce(float hor)
     {
         transform.localScale = new Vector3(
-            Mathf.Abs(transform.localScale.x) * hor > 0 ? 1 : -1,
+            Mathf.Abs(transform.localScale.x) * hor > 0 ? Mathf.Abs(transform.localScale.x) : -Mathf.Abs(transform.localScale.x),
             transform.localScale.y,
             transform.localScale.z);
     }
@@ -312,13 +326,25 @@ public class PlayerMovementGroundSticky : PlayerMovement
             }
             else
             {
-                if (Mathf.Abs(input.X) < 0.1f && input.Y < -0.5f)
+                // Debug.Log("normalTester.SurfaceCount" + normalTester.SurfaceCount);
+                if (/* Mathf.Abs(input.X) < 0.1f && */ input.Y < -0.5f) // && normalTester.SurfaceCount < 2)
                 {
                     groundTester.Traverse();
+                    if(transform.localScale.y > 0.5f)
+                        transform.localScale += new Vector3(0.05f * Mathf.Sign(transform.localScale.x), -0.05f, 1);
                 }
-
+                else
+                {
+                    Debug.Log("grow " + Time.time);
+                    if (transform.localScale.y < 1)
+                        // transform.localScale = Vector3.one;
+                        transform.localScale += new Vector3(-0.05f * Mathf.Sign(transform.localScale.x), 0.05f, 1);
+                    else
+                        transform.localScale = new Vector3(1 * Mathf.Sign(transform.localScale.x), 1, 1);
+                }   
             }
         }
+
         return vel;
     }
 
@@ -326,7 +352,7 @@ public class PlayerMovementGroundSticky : PlayerMovement
     {
         var vel = body.velocity;
         if (!IsWalled && !IsLocked) ScaleX();
-        Debug.Log(Normal);
+        // Debug.Log(Normal);
         if (isSticky && Normal.magnitude > Mathf.Epsilon)
             gravity = -50 * Normal;
         else
