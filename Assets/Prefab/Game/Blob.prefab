@@ -462,6 +462,7 @@ GameObject:
   - component: {fileID: 6995163165146335639}
   - component: {fileID: 6995163165146335643}
   - component: {fileID: 6995163165146335644}
+  - component: {fileID: -6325692538349324303}
   m_Layer: 10
   m_Name: Blob
   m_TagString: Untagged
@@ -706,6 +707,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ff02515ed99f941159b33543124c6fa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-6325692538349324303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3989262835916380532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fd49e53c7a5d7a4d876b56604c1eeab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &3989262836527794290
@@ -1079,11 +1092,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3989262835916380540}
     m_Modifications:
-    - target: {fileID: 4688283509045883601, guid: 941d0983fd6ba4c7487828726bbbca4d,
-        type: 3}
-      propertyPath: m_Name
-      value: StatusCanvas
-      objectReference: {fileID: 0}
     - target: {fileID: 4711281026309572872, guid: 941d0983fd6ba4c7487828726bbbca4d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1188,6 +1196,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4688283509045883601, guid: 941d0983fd6ba4c7487828726bbbca4d,
+        type: 3}
+      propertyPath: m_Name
+      value: StatusCanvas
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 941d0983fd6ba4c7487828726bbbca4d, type: 3}
