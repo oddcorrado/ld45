@@ -140,8 +140,10 @@ public class PlayerMovementGroundSticky : PlayerMovement
                 // newVel = Quaternion.Euler(0, 0, transform.rotation.eulerAngles.z) * new Vector3(WalkGroundSpeed * hor, 0, 0);
                 var angle = Mathf.Rad2Deg * Mathf.Atan2(Normal.y, Normal.x) - 90;
                 Debug.DrawLine(transform.position, transform.position + new Vector3(Normal.x, Normal.y, 0) * 10, Color.yellow);
-                // newVel = Quaternion.Euler(0, 0, angle) * new Vector3(walkGroundSpeed * hor, 0, 0);
-                newVel = Quaternion.Euler(0, 0, transform.rotation.eulerAngles.z) * new Vector3(WalkGroundSpeed * hor, 0, 0);
+                //if(!isSticky)
+                  //  newVel = Quaternion.Euler(0, 0, angle) * new Vector3(sizeMul * walkGroundSpeed * hor, 0, 0);
+                //else
+                    newVel = Quaternion.Euler(0, 0, transform.rotation.eulerAngles.z) * new Vector3(sizeMul * WalkGroundSpeed * hor, 0, 0);
                 // Debug.DrawLine(transform.position + new Vector3(0, 0.2f, 0), transform.position + new Vector3(0, 0.2f, 0) + new Vector3(vel.x, vel.y, 0), Color.red);
                 Debug.DrawLine(transform.position, transform.position + new Vector3(newVel.x, newVel.y, 0), Color.white);
                 var gi = groundInertia <= Mathf.Epsilon ? 0f : 0.9f + groundInertia * 0.01f;
@@ -197,7 +199,7 @@ public class PlayerMovementGroundSticky : PlayerMovement
         vel.x += ExtraVel.x;
         ExtraVel *= 0.9f; // FIXME
 
-        vel.y = Mathf.Max(vel.y, -maxGravityVelocity);
+        vel.y = Mathf.Max(vel.y, -maxGravityVelocity *  sizeMul);
 
         if(!isSticky)
         {
@@ -224,7 +226,7 @@ public class PlayerMovementGroundSticky : PlayerMovement
     {
         float ratio = (jumpPreWarmRatio + (1 - jumpPreWarmRatio) * ((Time.time - jumpStartDate) / jumpDeltaTime));
 
-        return ratio;
+        return sizeMul * ratio;
     }
 
     private Vector3 JumpVel(Vector3 vel, bool reset)
@@ -343,14 +345,14 @@ public class PlayerMovementGroundSticky : PlayerMovement
                     Debug.Log("normalTester.SurfaceCount" + normalTester.SurfaceCount);
                     groundTester.Traverse();
                     if(transform.localScale.y > 0.5f)
-                        transform.localScale += new Vector3(0.05f * Mathf.Sign(transform.localScale.x), -0.05f, 1);
+                        transform.localScale += new Vector3(0.05f * sizeMul * Mathf.Sign(transform.localScale.x), -0.05f * sizeMul, 1);
                 }
                 else
                 {
                     // Debug.Log("grow " + Time.time);
                     if (transform.localScale.y < sizeMul)
                         // transform.localScale = Vector3.one;
-                        transform.localScale += new Vector3(-0.05f * Mathf.Sign(transform.localScale.x), 0.05f, 1);
+                        transform.localScale += new Vector3(-0.05f * sizeMul * Mathf.Sign(transform.localScale.x), 0.05f * sizeMul, 1);
                     else
                         transform.localScale = new Vector3(1 * Mathf.Sign(transform.localScale.x), 1, 1) * sizeMul;
                 }   

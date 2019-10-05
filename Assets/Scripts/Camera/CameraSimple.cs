@@ -27,17 +27,17 @@ public class CameraSimple: MonoBehaviour
 
         if(player.transform.position.x - transform.position.x < -offsetX * f)
         {
-            position.x = player.transform.position.x + offsetX;
+            position.x = player.transform.position.x + offsetX * f;
 
         }
         if(player.transform.position.x - transform.position.x > offsetX * f)
         {
-            position.x = player.transform.position.x - offsetX;
+            position.x = player.transform.position.x - offsetX * f;
         }   
 
         if (player.transform.position.y - transform.position.y < -offsetY * f)
         {
-            position.y = player.transform.position.y + offsetY;
+            position.y = player.transform.position.y + offsetY * f;
 
         }
         if (player.transform.position.y - transform.position.y > offsetY * f)
