@@ -53,11 +53,6 @@ public class AudioController : MonoBehaviour
             _walk.volume = 1;
         }
 
-        if(_blobMovement.Movement == "idle")
-        {
-            _walk.volume = 0.25f;
-        }
-
         if (_blobMovement.Movement == "air")
         {
             if(!_jump.isPlaying)
