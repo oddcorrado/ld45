@@ -538,6 +538,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8d97e569bab298458f09b132d0095ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _energeticValue: 2
+  _maximumEnergy: 2
 --- !u!114 &8976644532305629660
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -550,7 +552,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5724c0d363e7e454c970a4384fd5a297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: test
+  _name: MICE
   _mass: {x: 1, y: 1, z: 0}
 --- !u!1 &2705237556140606010
 GameObject:
@@ -990,6 +992,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2705237555528340276}
     m_Modifications:
+    - target: {fileID: 4688283509045883601, guid: 941d0983fd6ba4c7487828726bbbca4d,
+        type: 3}
+      propertyPath: m_Name
+      value: StatusCanvas
+      objectReference: {fileID: 0}
     - target: {fileID: 4711281026309572872, guid: 941d0983fd6ba4c7487828726bbbca4d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1094,11 +1101,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4688283509045883601, guid: 941d0983fd6ba4c7487828726bbbca4d,
-        type: 3}
-      propertyPath: m_Name
-      value: StatusCanvas
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 941d0983fd6ba4c7487828726bbbca4d, type: 3}

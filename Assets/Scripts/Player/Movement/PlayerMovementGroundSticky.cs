@@ -130,16 +130,16 @@ public class PlayerMovementGroundSticky : PlayerMovement
 
     private bool CanCrouch()
     {
-        if (crouchBlocker.Block) { Debug.Log("BLOCK"); return false; }
+        if (crouchBlocker.Block) { /* Debug.Log("BLOCK"); */ return false; }
 
 
-        if (Normal.magnitude < Mathf.Epsilon) { Debug.Log("ZERO NORMAL"); return false; }
+        if (Normal.magnitude < Mathf.Epsilon) { /* Debug.Log("ZERO NORMAL"); */ return false; }
 
-        if (Mathf.Abs(Normal.x) < Mathf.Epsilon) { Debug.Log("VERTICAL NORMAL " + Normal); return true; }
+        if (Mathf.Abs(Normal.x) < Mathf.Epsilon) { /* Debug.Log("VERTICAL NORMAL " + Normal); */ return true; }
 
-        if (Mathf.Abs((Normal.y / Normal.x)) > 0.5f) { Debug.Log("OK NORMAL" + Mathf.Abs((Normal.y / Normal.x))); return true; }
+        if (Mathf.Abs((Normal.y / Normal.x)) > 0.5f) { /* Debug.Log("OK NORMAL" + Mathf.Abs((Normal.y / Normal.x))); */ return true; }
 
-        Debug.Log("HOR NORMAL");
+        // Debug.Log("HOR NORMAL");
 
         return false;
     }
