@@ -5494,7 +5494,7 @@ MonoBehaviour:
   groundSpeedStart: 8
   jumpGroundVelStart: 14
   foods:
-  - type: 0
+  - type: 2
     sizeContribution:
       serializedVersion: 2
       m_Curve:
