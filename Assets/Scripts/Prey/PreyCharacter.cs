@@ -4,6 +4,20 @@ using UnityEngine;
 
 public class PreyCharacter : MonoBehaviour
 {
+    [SerializeField]
+    private float _energeticValue = 2;
+    public float EnergeticValue
+    {
+        get { return _energeticValue; }
+    }
+
+    [SerializeField]
+    private int _maximumEnergy = 2;
+    public int MaximumEnergy
+    {
+        get { return _maximumEnergy; }
+    }
+
     private Animator _animator;
     private Rigidbody2D _rigidbody;
     private string _currentLayerName;
