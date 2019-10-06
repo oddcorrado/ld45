@@ -116,7 +116,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 67.1, y: -13.1}
+  m_AnchoredPosition: {x: 67.099976, y: -13.099976}
   m_SizeDelta: {x: 280.2, y: 29.199997}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &322650066669277529
@@ -168,7 +168,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _colorAlert: {r: 1, g: 0, b: 0, a: 1}
-  _alert: 25
+  _alert: 30
+  _decreaseFood: 10
+  _decreaseRate: 1
 --- !u!1 &322650066670009377
 GameObject:
   m_ObjectHideFlags: 0

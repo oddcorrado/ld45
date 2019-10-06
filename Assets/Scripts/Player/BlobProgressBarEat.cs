@@ -12,9 +12,23 @@ public class BlobProgressBarEat : MonoBehaviour
     [SerializeField]
     private float _alert = 25f;
 
+    [SerializeField]
+    private float _decreaseFood = 1f;
+
+    [SerializeField]
+    private float _decreaseRate = 1f;    
+
     private Color _startColor;
     private Image _progress;
     private Text _txt;
+
+    [SerializeField]
+    private int _valueProgressBarMax = 100;
+    public int ValueProgressBarMax
+    {
+        get { return _valueProgressBarMax; }
+        set { _valueProgressBarMax = value; }
+    }
 
     private float _value;
     public float Value
@@ -27,32 +41,24 @@ public class BlobProgressBarEat : MonoBehaviour
         set
         {
             _value = value;
-            _value = Mathf.Clamp(_value, 0, 100);
+            _value = Mathf.Clamp(_value, 0, _valueProgressBarMax);
             UpdateValue();
         }
     }
-    void Start()
+    private void Start()
     {
         _progress = transform.Find("Progress").GetComponent<Image>();
         _txt = _progress.transform.Find("Text").GetComponent<Text>();
         _startColor = _progress.color;
         Value = 100;
+
+        StartCoroutine(DecreaseHunger());
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKey(KeyCode.KeypadMinus))
-        {
-            Debug.Log("minus");
-            Value--;
-        }
-
-        if(Input.GetKey(KeyCode.KeypadPlus))
-        {
-            Debug.Log("plus");
-            Value++;
-        }
+        
     }
 
     private void UpdateValue()
@@ -68,5 +74,16 @@ public class BlobProgressBarEat : MonoBehaviour
         {
             _progress.color = _startColor;
         }
+    }
+
+    private IEnumerator DecreaseHunger()
+    {
+        while(Value > 0)
+        {
+            Value -= _decreaseFood;
+            yield return new WaitForSeconds(_decreaseRate);
+        }
+
+        // TODO : game over
     }
 }

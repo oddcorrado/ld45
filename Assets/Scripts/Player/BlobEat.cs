@@ -4,23 +4,20 @@ using UnityEngine;
 
 public class BlobEat : MonoBehaviour
 {
+    private GameObject _gameObjectProgessBar;
+    private BlobProgressBarEat _progressBarUi;
     private Dictionary<string, int> _preys = new Dictionary<string, int>();
     public Dictionary<string, int> Preys
     {
         get { return _preys; }
     }
-    // Start is called before the first frame update
-    void Start()
+
+    private void Awake()
     {
-        
+        _gameObjectProgessBar = GameObject.Find("BlobUI");
+        _progressBarUi = _gameObjectProgessBar.transform.Find("ProgressBar").GetComponent<BlobProgressBarEat>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        //if(Preys.Count > 0)
-        //  Debug.Log(Preys["test"]);
-    }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if(IsEdible(collision.transform.tag))
@@ -32,6 +29,9 @@ public class BlobEat : MonoBehaviour
     private void Eat(Transform prey)
     {
         SetPrey(prey.GetComponent<PreyStats>().Name);
+        _progressBarUi.Value += prey.GetComponent<PreyCharacter>().EnergeticValue;
+        _progressBarUi.ValueProgressBarMax += prey.GetComponent<PreyCharacter>().MaximumEnergy;
+
         Destroy(prey.gameObject);
     }
 
