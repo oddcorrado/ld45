@@ -21,12 +21,8 @@ public class BlobProgressBarEat : MonoBehaviour
     private Color _startColor;
     private Image _progress;
     private Text _txt;
-
-    private bool _isALive = true;
-    public bool IsALive
-    {
-        get { return _isALive; }
-    }
+    private GameObject blobUI;
+    private MainMenu _gameover;
 
     [SerializeField]
     private int _valueProgressBarMax = 100;
@@ -57,6 +53,8 @@ public class BlobProgressBarEat : MonoBehaviour
         _txt = _progress.transform.Find("Text").GetComponent<Text>();
         _startColor = _progress.color;
         Value = 100;
+        blobUI = GameObject.Find("BlobUI");
+        _gameover = blobUI.GetComponent<MainMenu>();
 
         StartCoroutine(DecreaseHunger());
     }
@@ -85,6 +83,6 @@ public class BlobProgressBarEat : MonoBehaviour
         }
 
         if (Value <= 0)
-            _isALive = false;
+            _gameover.GameOver();
     }
 }

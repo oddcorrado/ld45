@@ -19,9 +19,7 @@ public class MainMenu : MonoBehaviour
         if(Input.GetKey(KeyCode.Escape))
         {
             Pause();
-        }
-
-        GameOver();
+        }        
     }
 
     public void PlayGame()
@@ -43,22 +41,17 @@ public class MainMenu : MonoBehaviour
 
     public void MainMenuScene()
     {
-        Time.timeScale = 1;
         SceneManager.LoadScene(0);
     }
 
     public void TryAgain()
     {
-        Time.timeScale = 1;
         SceneManager.LoadScene(1);
     }
 
     public void GameOver()
     {
-        if(!transform.Find("ProgressBar").GetComponent<BlobProgressBarEat>().IsALive)
-        {
-            Time.timeScale = 0;
-            transform.Find("GameOver").gameObject.SetActive(true);
-        }
+        Time.timeScale = 0;
+        transform.Find("GameOver").gameObject.SetActive(true);
     }
 }
