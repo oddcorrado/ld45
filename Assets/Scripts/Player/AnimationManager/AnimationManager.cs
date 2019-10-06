@@ -10,7 +10,7 @@ public class AnimationManager : MonoBehaviour
         get { return movement; }
         set
         {
-            //Debug.Log("AnimationManager " + value);
+            Debug.Log("AnimationManager " + value);
             movement = value;
         }
     }
@@ -21,7 +21,7 @@ public class AnimationManager : MonoBehaviour
         get { return command; }
         set
         {
-            // Debug.Log("AnimationManager " + value);
+             //Debug.Log("AnimationManager " + value);
             if (command == value) return;
             command = value;
         }

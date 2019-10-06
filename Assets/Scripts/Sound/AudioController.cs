@@ -6,6 +6,7 @@ public class AudioController : MonoBehaviour
 {
     private GameObject _blob;
     private AnimationManager _blobMovement;
+    private bool _isFalling = false;
     private AudioSource _walk;
     public AudioSource Walk
     {
@@ -34,6 +35,9 @@ public class AudioController : MonoBehaviour
     {
         _blob = GameObject.Find("BlobSticky");
         _blobMovement = _blob.GetComponent<AnimationManager>();
+
+        if (_blobMovement.Movement == "air")
+            _isFalling = true;
     }
 
     private void Awake()
@@ -46,7 +50,14 @@ public class AudioController : MonoBehaviour
 
     private void Update()
     {      
-        if(_blobMovement.Movement == "run")
+
+        if(_blobMovement.Movement == "idle")
+        {
+            _walk.Stop();
+            _walk.loop = false;            
+        }
+
+        if(_blobMovement.Movement == "run" && !_isFalling)
         {
             if(!_walk.isPlaying)
             {
@@ -55,17 +66,28 @@ public class AudioController : MonoBehaviour
             }
         }
 
-        if(_blobMovement.Movement == "idle")
-        {
-            _walk.Stop();
-            _walk.loop = false;
-        }
-
         if (_blobMovement.Movement == "air")
-        {
-            if(!_jump.isPlaying)
-            {
+        {            
+            if (!_jump.isPlaying && !_isFalling)
+            { 
+                _walk.Stop();
+                _land.Stop();
                 _jump.Play();
+                _isFalling = true;
+            }
+        } 
+        else
+        {
+            if (_isFalling)
+            {
+                if (!_land.isPlaying)
+                {
+                    _walk.Stop();
+                    _land.Stop();
+                    _jump.Stop();
+                    _land.Play();
+                    _isFalling = false;
+                }
             }
         }
     }
