@@ -302,9 +302,11 @@ GameObject:
   - component: {fileID: 8342238290557486036}
   - component: {fileID: -3831407154851879088}
   - component: {fileID: 5722158506643233597}
+  - component: {fileID: 1565425030}
+  - component: {fileID: 1565425031}
   m_Layer: 10
-  m_Name: AiBlob
-  m_TagString: Untagged
+  m_Name: Ant
+  m_TagString: Prey
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -465,7 +467,7 @@ Animator:
   m_GameObject: {fileID: 2705237555528340284}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: eb875d5cdeba96a4394f0b74e396aaf4, type: 2}
+  m_Controller: {fileID: 9100000, guid: 9d1393b290b4d444d92abba7fa257c8c, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -512,7 +514,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 6852899559933622957, guid: fdd9511f6bb0b6243b81302650b44020,
+  m_Sprite: {fileID: 6914455548436797895, guid: a6a044f896e1eba47b11f36911fabf8c,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -524,6 +526,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1565425030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2705237555528340284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5724c0d363e7e454c970a4384fd5a297, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _name: test
+  _mass: {x: 1, y: 1, z: 0}
+--- !u!114 &1565425031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2705237555528340284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8d97e569bab298458f09b132d0095ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2705237556140606010
 GameObject:
   m_ObjectHideFlags: 0
@@ -1071,26 +1099,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: StatusCanvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 6449792206005447224, guid: 941d0983fd6ba4c7487828726bbbca4d,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6449792206005447224, guid: 941d0983fd6ba4c7487828726bbbca4d,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6449792206005447224, guid: 941d0983fd6ba4c7487828726bbbca4d,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6449792206005447224, guid: 941d0983fd6ba4c7487828726bbbca4d,
-        type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 941d0983fd6ba4c7487828726bbbca4d, type: 3}
