@@ -13,7 +13,7 @@ public class BlobProgressBarEat : MonoBehaviour
     private float _alert = 25f;
 
     [SerializeField]
-    private float _decreaseFood = 1f;
+    private AnimationCurve _curveDecreaseFood;
 
     [SerializeField]
     private float _decreaseRate = 1f;    
@@ -58,13 +58,13 @@ public class BlobProgressBarEat : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        Debug.Log("evaluate : " + _curveDecreaseFood.Evaluate(_valueProgressBarMax));
     }
 
     private void UpdateValue()
     {
-        _txt.text = Value + "%";
-        _progress.fillAmount = Value / 100;
+        _txt.text = (int)((Value / _valueProgressBarMax) * 100) + "%";
+        _progress.fillAmount = Value / _valueProgressBarMax;
 
         if(Value <= _alert)
         {
@@ -80,7 +80,7 @@ public class BlobProgressBarEat : MonoBehaviour
     {
         while(Value > 0)
         {
-            Value -= _decreaseFood;
+            Value -= _curveDecreaseFood.Evaluate(_valueProgressBarMax);
             yield return new WaitForSeconds(_decreaseRate);
         }
 

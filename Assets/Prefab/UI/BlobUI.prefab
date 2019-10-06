@@ -167,10 +167,62 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2090ad79065b1b4598d1b8cd5b808f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _curveDecreaseFood:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 2.8874567
+      outSlope: 2.8874567
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 33.68965
+      value: 97.277405
+      inSlope: 2.1985002
+      outSlope: 2.1985002
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 73.857605
+      value: 157.91267
+      inSlope: 3.0512335
+      outSlope: 3.0512335
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 92.07473
+      value: 241.58253
+      inSlope: 2.5623062
+      outSlope: 2.5623062
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 200.16034
+      value: 299.0504
+      inSlope: 0.5316886
+      outSlope: 0.5316886
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   _colorAlert: {r: 1, g: 0, b: 0, a: 1}
   _alert: 30
   _decreaseFood: 10
   _decreaseRate: 1
+  _valueProgressBarMax: 100
 --- !u!1 &322650066670009377
 GameObject:
   m_ObjectHideFlags: 0
