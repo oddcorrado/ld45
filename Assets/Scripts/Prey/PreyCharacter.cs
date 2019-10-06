@@ -24,7 +24,6 @@ public class PreyCharacter : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log("velocity" + _rigidbody.velocity);
         HandleLayer();
     }
 
@@ -32,12 +31,7 @@ public class PreyCharacter : MonoBehaviour
     {
         if (IsMoving)
         {
-            ActivateLayers("MoveLayer");
             AnimMovement(_rigidbody.velocity.x);
-        }
-        else
-        {
-            ActivateLayers("IdleLayer");
         }
     }
 
@@ -59,19 +53,5 @@ public class PreyCharacter : MonoBehaviour
                 Mathf.Abs(transform.localScale.y),
                 Mathf.Abs(transform.localScale.z));
         }
-    }
-
-    private void ActivateLayers(string layerName)
-    {
-        if (layerName == _currentLayerName) return;
-
-        _currentLayerName = layerName;
-
-        for (int i = 0; i < _animator.layerCount; i++)
-        {
-            _animator.SetLayerWeight(i, 0);
-        }
-
-        _animator.SetLayerWeight(_animator.GetLayerIndex(layerName), 1);
     }
 }
