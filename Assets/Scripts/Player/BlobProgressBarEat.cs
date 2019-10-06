@@ -58,7 +58,7 @@ public class BlobProgressBarEat : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("evaluate : " + _curveDecreaseFood.Evaluate(_valueProgressBarMax));
+        //Debug.Log("evaluate : " + _curveDecreaseFood.Evaluate(_valueProgressBarMax));
     }
 
     private void UpdateValue()
