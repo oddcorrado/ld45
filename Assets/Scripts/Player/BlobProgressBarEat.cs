@@ -22,7 +22,7 @@ public class BlobProgressBarEat : MonoBehaviour
     private Image _progress;
     private Text _txt;
     private GameObject blobUI;
-    private MainMenu _gameover;
+    private MainMenu _gameover;    
 
     [SerializeField]
     private int _valueProgressBarMax = 100;
@@ -53,8 +53,10 @@ public class BlobProgressBarEat : MonoBehaviour
         _txt = _progress.transform.Find("Text").GetComponent<Text>();
         _startColor = _progress.color;
         Value = 100;
+
         blobUI = GameObject.Find("BlobUI");
-        _gameover = blobUI.GetComponent<MainMenu>();
+        if(blobUI != null)
+            _gameover = blobUI.GetComponent<MainMenu>();        
 
         StartCoroutine(DecreaseHunger());
     }
