@@ -170,7 +170,7 @@ public class AiMovement : AiMovementBase
     protected virtual void ScaleXForce(float hor)
     {
         transform.localScale = new Vector3(
-            Mathf.Abs(transform.localScale.x) * hor > 0 ? 1 : -1,
+            Mathf.Abs(transform.localScale.x) * hor > 0 ? Mathf.Abs(transform.localScale.x) : -Mathf.Abs(transform.localScale.x),
             transform.localScale.y,
             transform.localScale.z);
     }

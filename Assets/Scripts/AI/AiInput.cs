@@ -27,8 +27,8 @@ public class AiInput : MonoBehaviour
                 myState = AiState.Walking;
                 break;
             case AiState.Walking:
-                if (Time.time % 10 > 5) horizontalSpeed = -1;
-                else horizontalSpeed = 1;
+                if (Time.time % 10 > 5) horizontalSpeed = -Mathf.Abs(transform.localScale.x);
+                else horizontalSpeed = Mathf.Abs(transform.localScale.x);
                 break;
             case AiState.Fleeing:
                 break;

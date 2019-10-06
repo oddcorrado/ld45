@@ -47,11 +47,17 @@ public class PreyCharacter : MonoBehaviour
 
         if (direction > 0)
         {
-            transform.localScale = new Vector3(-1, 1, 1);
+            transform.localScale = new Vector3(
+                -Mathf.Abs(transform.localScale.x),
+                Mathf.Abs(transform.localScale.y),
+                Mathf.Abs(transform.localScale.z));
         }
         else if (direction < 0)
         {
-            transform.localScale = new Vector3(1, 1, 1);
+            transform.localScale = new Vector3(
+                Mathf.Abs(transform.localScale.x),
+                Mathf.Abs(transform.localScale.y),
+                Mathf.Abs(transform.localScale.z));
         }
     }
 
