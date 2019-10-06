@@ -12,9 +12,9 @@ public class PreyStats : MonoBehaviour
     }
 
     [SerializeField]
-    private Vector3 _mass = new Vector3(1, 1, 0);
-    public Vector3 Mass
+    private float _sizeMulMin = 1;
+    public float SizeMulMin
     {
-        get { return _mass; }
+        get { return _sizeMulMin; }
     }
 }

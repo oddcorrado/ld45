@@ -55,12 +55,6 @@ public class BlobProgressBarEat : MonoBehaviour
         StartCoroutine(DecreaseHunger());
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        Debug.Log("evaluate : " + _curveDecreaseFood.Evaluate(_valueProgressBarMax));
-    }
-
     private void UpdateValue()
     {
         _txt.text = (int)((Value / _valueProgressBarMax) * 100) + "%";
