@@ -14,6 +14,8 @@ public class GroundTester : MonoBehaviour
     private Collider2D wallCollider;
     private BoxCollider2D groundCollider;
 
+    private PlayerMovementGroundSticky playerMovementGroundSticky;
+
 	void Start()
 	{
         playerMovement = transform.parent.gameObject.GetComponent<PlayerMovement>();
@@ -29,7 +31,6 @@ public class GroundTester : MonoBehaviour
 	void OnTriggerEnter2D(Collider2D other)
 	{
         others.Add(other);
-
         if(!playerMovement.IsWalled && !playerMovement.IsGrounded)
         {
             var px = pxPrefab.Get<PooledBullet>(true);
@@ -38,6 +39,7 @@ public class GroundTester : MonoBehaviour
             px.transform.position = position;
             px.transform.rotation = transform.rotation;
             playerMovement.AirCommandCount = 0;
+            px.transform.localScale = transform.parent.localScale.x * Vector3.one;
         }
         playerMovement.IsGrounded = others.Count > 0;
         ResizeCollider();
@@ -55,6 +57,7 @@ public class GroundTester : MonoBehaviour
             position.z = px.transform.position.z;
             px.transform.position = position;
             px.transform.rotation = transform.rotation;
+            px.transform.localScale = transform.parent.localScale.x * Vector3.one;
         }
         ResizeCollider();
     }
