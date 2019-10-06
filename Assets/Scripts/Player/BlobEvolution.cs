@@ -14,8 +14,6 @@ public class BlobEvolution : MonoBehaviour
     {
         public FoodType type;
         public AnimationCurve sizeContribution = new AnimationCurve(new Keyframe[] { new Keyframe(0, 0), new Keyframe(10, 1) });
-        public AnimationCurve speedContribution = new AnimationCurve(new Keyframe[] { new Keyframe(0, 0), new Keyframe(10, 1) });
-        public AnimationCurve jumpContribution = new AnimationCurve(new Keyframe[] { new Keyframe(0, 0), new Keyframe(10, 1) });
         public Feature featureUnlock;
     }
 

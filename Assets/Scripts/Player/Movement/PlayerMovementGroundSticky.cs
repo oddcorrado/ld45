@@ -246,7 +246,7 @@ public class PlayerMovementGroundSticky : PlayerMovement
     {
         float ratio = (jumpPreWarmRatio + (1 - jumpPreWarmRatio) * ((Time.time - jumpStartDate) / jumpDeltaTime));
 
-        return sizeMul * ratio;
+        return Mathf.Pow(sizeMul, 0.75f) * ratio;
     }
 
     private Vector3 JumpVel(Vector3 vel, bool reset)
@@ -389,9 +389,9 @@ public class PlayerMovementGroundSticky : PlayerMovement
         if (!IsWalled && !IsLocked) ScaleX();
         // Debug.Log(Normal);
         if (isSticky && Normal.magnitude > Mathf.Epsilon)
-            gravity = -50 * Normal;
+            gravity = -50 * Normal * Mathf.Pow(sizeMul, 0.5f);
         else
-            gravity = new Vector3(0, -50, 0);
+            gravity = new Vector3(0, -50, 0) * Mathf.Pow(sizeMul, 0.5f);
         if (!IsLocked && !playerCondition.Handicaps[(int)PlayerCondition.Handicap.MOVE])
         {
             float horVel = playerCondition.Handicaps[(int)PlayerCondition.Handicap.SLOW] ? input.X * 0.2f : input.X;
