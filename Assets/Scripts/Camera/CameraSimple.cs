@@ -22,7 +22,7 @@ public class CameraSimple: MonoBehaviour
     void Update()   
     {
         Vector3 position = transform.position;
-        f = playerMovementGroundSticky.SizeMul;
+        f = 1.5f + playerMovementGroundSticky.SizeMul;
 
         if (player == null) return;
 
