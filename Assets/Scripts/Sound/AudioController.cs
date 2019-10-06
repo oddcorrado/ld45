@@ -60,7 +60,10 @@ public class AudioController : MonoBehaviour
 
         if (_blobMovement.Movement == "air")
         {
-            _jump.Play();
+            if(!_jump.isPlaying)
+            {
+                _jump.Play();
+            }
         }
     }
 }
