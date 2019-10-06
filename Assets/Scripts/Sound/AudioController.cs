@@ -45,9 +45,7 @@ public class AudioController : MonoBehaviour
     }
 
     private void Update()
-    {
-        Debug.Log("movement : " + _blobMovement.Movement);
-
+    {      
         if(_blobMovement.Movement == "run")
         {
             if(!_walk.isPlaying)
