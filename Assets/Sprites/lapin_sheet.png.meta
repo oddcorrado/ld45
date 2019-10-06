@@ -1,0 +1,415 @@
+fileFormatVersion: 2
+guid: cf7c6a6defeffa043a147f8f9446ff10
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -9109457119832188450
+    second: lapin_sheet_0
+  - first:
+      213: -7276083899348647864
+    second: lapin_sheet_1
+  - first:
+      213: -1606426536528115196
+    second: lapin_sheet_2
+  - first:
+      213: 2143554437405989622
+    second: lapin_sheet_3
+  - first:
+      213: 8958539575375783920
+    second: lapin_sheet_4
+  - first:
+      213: 4632777994190828963
+    second: lapin_sheet_5
+  - first:
+      213: 5573435913765580310
+    second: lapin_sheet_6
+  - first:
+      213: -5128954872508219673
+    second: lapin_sheet_7
+  - first:
+      213: -1217256147713751613
+    second: lapin_sheet_8
+  - first:
+      213: 8963245475740949729
+    second: lapin_sheet_9
+  - first:
+      213: 7354799823750495143
+    second: lapin_sheet_10
+  - first:
+      213: 195270262973424151
+    second: lapin_sheet_11
+  - first:
+      213: 4827399886379812894
+    second: lapin_sheet_12
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 300
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: lapin_sheet_0
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 0
+        width: 320
+        height: 206
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56de808693b1bf844b0dab7852379202
+      internalID: -9109457119832188450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lapin_sheet_1
+      rect:
+        serializedVersion: 2
+        x: 722
+        y: 0
+        width: 462
+        height: 230
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3aa72b09421a78f43a68e5eb2f259079
+      internalID: -7276083899348647864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lapin_sheet_2
+      rect:
+        serializedVersion: 2
+        x: 1412
+        y: 0
+        width: 330
+        height: 201
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bf5f4b39d851a241a881fefd640bbbf
+      internalID: -1606426536528115196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lapin_sheet_3
+      rect:
+        serializedVersion: 2
+        x: 2072
+        y: 0
+        width: 292
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10652bf7107e9bf47882fa82eb709440
+      internalID: 2143554437405989622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lapin_sheet_4
+      rect:
+        serializedVersion: 2
+        x: 2728
+        y: 0
+        width: 291
+        height: 254
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3ee9c9df7af07d449f11b41a7667ca2
+      internalID: 8958539575375783920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lapin_sheet_5
+      rect:
+        serializedVersion: 2
+        x: 3378
+        y: 0
+        width: 253
+        height: 211
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cd5a1835830d3147aaea27fb0c8c4f8
+      internalID: 4632777994190828963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lapin_sheet_6
+      rect:
+        serializedVersion: 2
+        x: 4009
+        y: 0
+        width: 282
+        height: 211
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d3eabf8688cb7d4bb62c013e14183e9
+      internalID: 5573435913765580310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lapin_sheet_7
+      rect:
+        serializedVersion: 2
+        x: 4616
+        y: 0
+        width: 340
+        height: 206
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2abb51d97d0787d4a99a6834af3567c6
+      internalID: -5128954872508219673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lapin_sheet_8
+      rect:
+        serializedVersion: 2
+        x: 5272
+        y: 0
+        width: 296
+        height: 216
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01c95654ee06dbb4ab3825be23463c2a
+      internalID: -1217256147713751613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lapin_sheet_9
+      rect:
+        serializedVersion: 2
+        x: 5893
+        y: 148
+        width: 311
+        height: 257
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c9dd6b2c9990524abe48f6998ec183e
+      internalID: 8963245475740949729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lapin_sheet_10
+      rect:
+        serializedVersion: 2
+        x: 6563
+        y: 56
+        width: 263
+        height: 305
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9d73e0a34990c4418050fd341c99a15
+      internalID: 7354799823750495143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lapin_sheet_11
+      rect:
+        serializedVersion: 2
+        x: 7248
+        y: 85
+        width: 311
+        height: 247
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c6952a8ad56d584184a7c05e555008b
+      internalID: 195270262973424151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lapin_sheet_12
+      rect:
+        serializedVersion: 2
+        x: 7899
+        y: 119
+        width: 271
+        height: 305
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b61770bf3398b95469607be7b01ad72e
+      internalID: 4827399886379812894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
