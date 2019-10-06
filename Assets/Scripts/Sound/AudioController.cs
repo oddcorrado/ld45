@@ -50,8 +50,11 @@ public class AudioController : MonoBehaviour
 
         if(_blobMovement.Movement == "run")
         {
-            _walk.Play();
-            _walk.loop = true;
+            if(!_walk.isPlaying)
+            {
+                _walk.Play();
+                _walk.loop = true;
+            }
         }
 
         if(_blobMovement.Movement == "idle")
