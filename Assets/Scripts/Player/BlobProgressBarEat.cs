@@ -22,6 +22,12 @@ public class BlobProgressBarEat : MonoBehaviour
     private Image _progress;
     private Text _txt;
 
+    private bool _isALive = true;
+    public bool IsALive
+    {
+        get { return _isALive; }
+    }
+
     [SerializeField]
     private int _valueProgressBarMax = 100;
     public int ValueProgressBarMax
@@ -78,6 +84,7 @@ public class BlobProgressBarEat : MonoBehaviour
             yield return new WaitForSeconds(_decreaseRate);
         }
 
-        // TODO : game over
+        if (Value <= 0)
+            _isALive = false;
     }
 }
