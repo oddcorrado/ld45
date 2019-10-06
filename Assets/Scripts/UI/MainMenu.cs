@@ -14,6 +14,11 @@ public class MainMenu : MonoBehaviour
 #endif
     }
 
+    private void Start()
+    {
+        Time.timeScale = 1;
+    }
+
     private void Update()
     {
         if(Input.GetKey(KeyCode.Escape))
