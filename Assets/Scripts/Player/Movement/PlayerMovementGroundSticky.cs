@@ -54,6 +54,7 @@ public class PlayerMovementGroundSticky : PlayerMovement
     protected bool inWallJump = false;
     protected GroundTester groundTester;
     protected NormalTester normalTester;
+    protected CrouchBlocker crouchBlocker;
     protected float horLock;
     private Vector3 jumpNormal;
 
@@ -105,6 +106,9 @@ public class PlayerMovementGroundSticky : PlayerMovement
         normalTester = transform.Find("NormalTester")?.GetComponent<NormalTester>();
         Debug.Assert(normalTester != null, "could not find NormalTester");
 
+        crouchBlocker = transform.Find("CrouchBlocker")?.GetComponent<CrouchBlocker>();
+        Debug.Assert(crouchBlocker != null, "could not find CrouchBlocker");
+
         Debug.Log(name + " " + walkGroundSpeed);
 
         //Physics2D.gravity = Vector2.zero;
@@ -124,6 +128,21 @@ public class PlayerMovementGroundSticky : PlayerMovement
         WallDetachState = WallDetach.DETACHED;
     }
 
+    private bool CanCrouch()
+    {
+        if (crouchBlocker.Block) { Debug.Log("BLOCK"); return false; }
+
+
+        if (Normal.magnitude < Mathf.Epsilon) { Debug.Log("ZERO NORMAL"); return false; }
+
+        if (Mathf.Abs(Normal.x) < Mathf.Epsilon) { Debug.Log("VERTICAL NORMAL " + Normal); return true; }
+
+        if (Mathf.Abs((Normal.y / Normal.x)) > 0.5f) { Debug.Log("OK NORMAL" + Mathf.Abs((Normal.y / Normal.x))); return true; }
+
+        Debug.Log("HOR NORMAL");
+
+        return false;
+    }
 
     protected virtual Vector3 Horizontal(Vector3 vel, float hor)
     {
@@ -140,7 +159,7 @@ public class PlayerMovementGroundSticky : PlayerMovement
                 // newVel = Quaternion.Euler(0, 0, transform.rotation.eulerAngles.z) * new Vector3(WalkGroundSpeed * hor, 0, 0);
                 var angle = Mathf.Rad2Deg * Mathf.Atan2(Normal.y, Normal.x) - 90;
                 Debug.DrawLine(transform.position, transform.position + new Vector3(Normal.x, Normal.y, 0) * 10, Color.yellow);
-                if (input.Y < -0.1f) hor *= 0.1f;
+                if (input.Y < -0.1f && CanCrouch()) hor *= 0f;
                 if(!isSticky)
                     newVel = Quaternion.Euler(0, 0, angle) * new Vector3(sizeMul * walkGroundSpeed * hor, 0, 0);
                 else
@@ -341,20 +360,20 @@ public class PlayerMovementGroundSticky : PlayerMovement
             else
             {
                 
-                if (/* Mathf.Abs(input.X) < 0.1f && */ input.Y < -0.5f) // && normalTester.SurfaceCount < 2)
+                if (/* Mathf.Abs(input.X) < 0.1f && */ input.Y < -0.5f && CanCrouch()) // && normalTester.SurfaceCount < 2)
                 {
-                    Debug.Log("normalTester.SurfaceCount" + normalTester.SurfaceCount);
-                    groundTester.Traverse();
-                    if(transform.localScale.y > 0.5f)
-                        transform.localScale += new Vector3(0.05f * sizeMul * Mathf.Sign(transform.localScale.x), -0.05f * sizeMul, 1);
+                    // Debug.Log("normalTester.SurfaceCount" + normalTester.SurfaceCount);
+                    // groundTester.Traverse();
+                    /* if(transform.localScale.y > 0.5f)
+                        transform.localScale += new Vector3(0.05f * sizeMul * Mathf.Sign(transform.localScale.x), -0.05f * sizeMul, 1); */
+                    transform.localScale = new Vector3(1 * Mathf.Sign(transform.localScale.x), 0.1f, 1) * sizeMul;
                 }
                 else
                 {
-                    // Debug.Log("grow " + Time.time);
-                    if (transform.localScale.y < sizeMul)
-                        // transform.localScale = Vector3.one;
+                    
+                    /* if (transform.localScale.y < sizeMul)
                         transform.localScale += new Vector3(-0.05f * sizeMul * Mathf.Sign(transform.localScale.x), 0.05f * sizeMul, 1);
-                    else
+                    else */
                         transform.localScale = new Vector3(1 * Mathf.Sign(transform.localScale.x), 1, 1) * sizeMul;
                 }   
             }
@@ -365,6 +384,7 @@ public class PlayerMovementGroundSticky : PlayerMovement
 
     protected virtual void FixedUpdate()
     {
+        CanCrouch();
         var vel = body.velocity;
         if (!IsWalled && !IsLocked) ScaleX();
         // Debug.Log(Normal);
