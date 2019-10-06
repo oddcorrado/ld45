@@ -266,7 +266,7 @@ public class AiMovement : AiMovementBase
     {
             if (!IsGrounded)
             {
-                if (input.verticalSpeed < -0.5f && vel.y < 0 && Mathf.Abs(input.horizontalSpeed) < 0.5f)
+                if (input.dive && vel.y < 0 && Mathf.Abs(input.horizontalSpeed) < 0.5f)
                 {
                     vel.y = Mathf.Min(vel.y, -diveVel);
                 }
