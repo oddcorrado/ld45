@@ -6,6 +6,7 @@ public class BlobEat : MonoBehaviour
 {
     private GameObject _gameObjectProgessBar;
     private BlobProgressBarEat _progressBarUi;
+    private PlayerMovementGroundSticky _playerMovement;
     private Dictionary<string, int> _preys = new Dictionary<string, int>();
     public Dictionary<string, int> Preys
     {
@@ -14,6 +15,7 @@ public class BlobEat : MonoBehaviour
 
     private void Awake()
     {
+        _playerMovement = transform.GetComponent<PlayerMovementGroundSticky>();
         _gameObjectProgessBar = GameObject.Find("BlobUI");
         _progressBarUi = _gameObjectProgessBar.transform.Find("ProgressBar").GetComponent<BlobProgressBarEat>();
     }
@@ -28,6 +30,8 @@ public class BlobEat : MonoBehaviour
 
     private void Eat(Transform prey)
     {
+        if (_playerMovement.SizeMul < prey.GetComponent<PreyStats>().SizeMulMin) return;
+
         SetPrey(prey.GetComponent<PreyStats>().Name);
         _progressBarUi.Value += prey.GetComponent<PreyCharacter>().EnergeticValue;
         _progressBarUi.ValueProgressBarMax += prey.GetComponent<PreyCharacter>().MaximumEnergy;
