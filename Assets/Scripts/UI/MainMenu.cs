@@ -56,7 +56,11 @@ public class MainMenu : MonoBehaviour
 
     public void GameOver()
     {
-        Time.timeScale = 0;
         transform.Find("GameOver").gameObject.SetActive(true);
+        var blob = FindObjectOfType<PlayerMovementGroundSticky>();
+        blob.IsLocked = true;
+        var px = blob.transform.Find("PxBlobs");
+        px.transform.Find("Rabbits").GetComponent<ParticleSystem>().Stop();
+        Time.timeScale = 0.1f;
     }
 }

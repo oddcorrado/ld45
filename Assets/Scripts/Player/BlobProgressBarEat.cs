@@ -104,7 +104,6 @@ public class BlobProgressBarEat : MonoBehaviour
         while(Value > 0)
         {
             Value -= _curveDecreaseFood.Evaluate(_valueProgressBarMax);
-            // Value -= 200;
             yield return new WaitForSeconds(_decreaseRate);
         }
 
