@@ -12,9 +12,9 @@ public static class AiDictionnary
         var nbNatures = Enum.GetNames(typeof(AiNature)).Length;
         var nbStates = Enum.GetNames(typeof(AiState)).Length;
 
-        string[] genericIdle = new string[] { "I'm bored !", "I'm hungry !", "This is a nice place.", "I'm tired !", "*yawns*", "I'm happy !" };
-        string[] genericWalk = new string[] { "I'm walking !", "I need to be over there.", "Nice day for a stroll."};
-        string[] genericFlee = new string[] { "Oh come on !", "Help me !", "Have mercy !", "My father will hear about this.", "Aaaaaah !", "Run for your lives !" };
+        string[] genericIdle = new string[] { "I'm bored !", "I'm hungry !", "This is a nice place.", "I'm tired !", "*yawns*", "I'm happy !", "I saw a mudcrab the other day." };
+        string[] genericWalk = new string[] { "I'm walking !", "I need to be over there.", "Nice day for a stroll.", "OwO what's this ?"};
+        string[] genericFlee = new string[] { "Oh come on !", "Help me !", "Have mercy !", "My father will hear about this.", "Aaaaaah !", "Run for your lives !", "Leave me be !" };
         string[] genericHide = new string[] { "I'll be safe here.", "Phew...", "Made it !"};
 
         dictionnary = new string[nbNatures, nbStates][];

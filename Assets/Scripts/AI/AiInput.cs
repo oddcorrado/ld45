@@ -37,16 +37,15 @@ public class AiInput : MonoBehaviour
 
     void Update()
     {
-        
 
-        var playerScale = Mathf.Abs(player.localScale.x / 30);
+        var playerScale = Mathf.Abs(player.localScale.x / 26);
         var selfScale = Mathf.Abs(GetComponentInParent<AiMovement>().transform.localScale.x);
-        var multiplier = facingLeft ? 1 : -1;
+        var multiplier = Mathf.Sign(GetComponentInParent<AiMovement>().transform.localScale.x);
 
         myText.transform.localScale = new Vector3(
             multiplier * playerScale / selfScale, 
             playerScale / selfScale, 
-            playerScale / selfScale);
+            1);
 
         switch (myState)
         {
@@ -57,7 +56,7 @@ public class AiInput : MonoBehaviour
                     facingLeft = Random.value > 0.5;
                     var speed = facingLeft? -Mathf.Abs(transform.localScale.x) : Mathf.Abs(transform.localScale.x);
 
-                    SwitchState(speed, 2 + 2 * Random.value, AiState.Walking);
+                    SwitchState(speed, 3 + 2 * Random.value, AiState.Walking);
                 }
                 break;
 
@@ -70,7 +69,7 @@ public class AiInput : MonoBehaviour
                 if(Time.time - stateChangeTime > lastCooldownTime)
                 {
                     facingLeft = !facingLeft;
-                    SwitchState(0, 3 * Random.value, AiState.Idle);
+                    SwitchState(0, 1 + 3 * Random.value, AiState.Idle);
                 }
                 else jump = !jump;
                 break;
