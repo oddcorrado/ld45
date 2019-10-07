@@ -82,5 +82,20 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 16
       objectReference: {fileID: 0}
+    - target: {fileID: 4707463030529669934, guid: 8054d68ab9e0c6946841c2a97c717af5,
+        type: 3}
+      propertyPath: walkGroundSpeed
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: -3562641943232777133, guid: 8054d68ab9e0c6946841c2a97c717af5,
+        type: 3}
+      propertyPath: _energeticValue
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: -3562641943232777133, guid: 8054d68ab9e0c6946841c2a97c717af5,
+        type: 3}
+      propertyPath: _maximumEnergy
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8054d68ab9e0c6946841c2a97c717af5, type: 3}

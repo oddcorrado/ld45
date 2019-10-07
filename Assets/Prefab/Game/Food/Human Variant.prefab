@@ -77,6 +77,37 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 64
       objectReference: {fileID: 0}
+    - target: {fileID: 4707463030529669934, guid: 8054d68ab9e0c6946841c2a97c717af5,
+        type: 3}
+      propertyPath: walkGroundSpeed
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: -3831407154851879088, guid: 8054d68ab9e0c6946841c2a97c717af5,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: ba9bf48331e93754983781459dc5412d, type: 2}
+    - target: {fileID: -3562641943232777133, guid: 8054d68ab9e0c6946841c2a97c717af5,
+        type: 3}
+      propertyPath: _energeticValue
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: -3562641943232777133, guid: 8054d68ab9e0c6946841c2a97c717af5,
+        type: 3}
+      propertyPath: _maximumEnergy
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 5722158506643233597, guid: 8054d68ab9e0c6946841c2a97c717af5,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -2508539927094285374, guid: e9f9663baa9ca4840810fec093137b28,
+        type: 3}
+    - target: {fileID: -8514458385759924914, guid: 8054d68ab9e0c6946841c2a97c717af5,
+        type: 3}
+      propertyPath: _name
+      value: RABBIT
+      objectReference: {fileID: 0}
     - target: {fileID: 1128032939923079544, guid: 8054d68ab9e0c6946841c2a97c717af5,
         type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
@@ -96,22 +127,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Size.y
       value: 0.7
-      objectReference: {fileID: 0}
-    - target: {fileID: -3831407154851879088, guid: 8054d68ab9e0c6946841c2a97c717af5,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: ba9bf48331e93754983781459dc5412d, type: 2}
-    - target: {fileID: 5722158506643233597, guid: 8054d68ab9e0c6946841c2a97c717af5,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: -2508539927094285374, guid: e9f9663baa9ca4840810fec093137b28,
-        type: 3}
-    - target: {fileID: -8514458385759924914, guid: 8054d68ab9e0c6946841c2a97c717af5,
-        type: 3}
-      propertyPath: _name
-      value: RABBIT
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8054d68ab9e0c6946841c2a97c717af5, type: 3}
