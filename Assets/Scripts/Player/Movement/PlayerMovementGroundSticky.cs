@@ -164,7 +164,8 @@ public class PlayerMovementGroundSticky : PlayerMovement
                 if(!isSticky)
                     newVel = Quaternion.Euler(0, 0, angle) * new Vector3(sizeMul * walkGroundSpeed * hor, 0, 0);
                 else
-                    newVel = Quaternion.Euler(0, 0, transform.rotation.eulerAngles.z) * new Vector3(sizeMul * WalkGroundSpeed * hor, 0, 0);
+                    //newVel = Quaternion.Euler(0, 0, transform.rotation.eulerAngles.z) * new Vector3(sizeMul * WalkGroundSpeed * hor, 0, 0);
+                    newVel = sizeMul * walkGroundSpeed * new Vector3(input.X, input.Y, 0);
                 // Debug.DrawLine(transform.position + new Vector3(0, 0.2f, 0), transform.position + new Vector3(0, 0.2f, 0) + new Vector3(vel.x, vel.y, 0), Color.red);
                 Debug.DrawLine(transform.position, transform.position + new Vector3(newVel.x, newVel.y, 0), Color.white);
                 var gi = groundInertia <= Mathf.Epsilon ? 0f : 0.9f + groundInertia * 0.01f;
