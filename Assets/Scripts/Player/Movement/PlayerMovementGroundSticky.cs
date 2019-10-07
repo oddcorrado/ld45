@@ -158,6 +158,7 @@ public class PlayerMovementGroundSticky : PlayerMovement
             {
                 // newVel = Quaternion.Euler(0, 0, transform.rotation.eulerAngles.z) * new Vector3(WalkGroundSpeed * hor, 0, 0);
                 var angle = Mathf.Rad2Deg * Mathf.Atan2(Normal.y, Normal.x) - 90;
+                // Debug.Log(Normal + " "+ angle);
                 Debug.DrawLine(transform.position, transform.position + new Vector3(Normal.x, Normal.y, 0) * 10, Color.yellow);
                 if (input.Y < -0.1f && CanCrouch()) hor *= 0f;
                 if(!isSticky)

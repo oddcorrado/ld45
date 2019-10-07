@@ -41,12 +41,13 @@ public class NormalTester : MonoBehaviour
         useAverage = isSticky;
     }
 
-	void FixedUpdate ()
+	void Update ()
     {
         float avg = 0;
         float dirtyShortestDistance = Mathf.Infinity;
         float dirtyShortestAngle = 90;
         SurfaceCount = 0;
+        // Debug.Log(transform.parent.name + "fck " + maxAngle);
 
         string angles = "";
         others.RemoveAll(o => o == null);
@@ -56,10 +57,15 @@ public class NormalTester : MonoBehaviour
             float angle = Mathf.Rad2Deg * Mathf.Atan2(distance2D.normal.y, distance2D.normal.x);
             Debug.DrawLine(transform.position, transform.position + new Vector3(distance2D.normal.x, distance2D.normal.y, 0), Color.black);
             if (angle < 0) angle += 360;
-            if (angle > 180) angle -= 360;
-            angles += "/[" + angle + " " + o.name+ "]";
+            // if (angle > 180) angle -= 360;
+            // CHECK THESE LINES
+            if (avg - angle > 180) angle += 360;
+            if (avg - angle < -180) angle -= 360;
+            // CHECK
+
             if (Mathf.Abs(angle - 90) <= maxAngle)
             {
+                angles += "/[*" + angle + " " + o.name + "]";
                 avg += (angle - 90);
                 SurfaceCount++;
 
@@ -69,6 +75,8 @@ public class NormalTester : MonoBehaviour
                     dirtyShortestDistance = distance2D.distance;
                 }
             }
+            else
+                angles += "/[*" + angle + " " + o.name + "*" + Mathf.Abs(angle - 90) + "vs" + maxAngle + "]";
 
 
         });
@@ -80,12 +88,15 @@ public class NormalTester : MonoBehaviour
             if(playerMovement != null) playerMovement.Normal = Vector3.zero;
             return;
         }
-        // Debug.Log(angles);
+
         if (SurfaceCount > 0) avg = avg / SurfaceCount;
+
+        // Debug.Log(angles + " " + avg + " " + SurfaceCount + " " +(GetAngle(avg, dirtyShortestAngle) + 90));
 
         transform.parent.rotation = Quaternion.Euler(0, 0, GetAngle(avg, dirtyShortestAngle));
         if(playerMovement != null)
             playerMovement.Normal = Quaternion.Euler(0, 0, GetAngle(avg, dirtyShortestAngle) + 90) * Vector3.right; // FIXME
+        // Debug.Log(angles + " " + avg + " " + (GetAngle(avg, dirtyShortestAngle) + 90) + playerMovement.Normal);
         // Debug.Log(transform.parent.gameObject.name + " normals: " + (avg + 90) + "/" + SurfaceCount + "/" + playerMovement.Normal);
 	}
 

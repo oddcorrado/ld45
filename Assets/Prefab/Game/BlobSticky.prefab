@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1079150057}
-  - component: {fileID: 1079150060}
   - component: {fileID: 1079150059}
   - component: {fileID: 1079150058}
   m_Layer: 9
@@ -33,20 +32,6 @@ Transform:
   m_Father: {fileID: 5934020636853407732}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1079150060
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1079150056}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e359208ebd574f18a040c14e041deb9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxAngle: 180
-  useAverage: 1
 --- !u!70 &1079150059
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -4878,7 +4863,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3455890415561779660}
-  - component: {fileID: 8522737621602519061}
   - component: {fileID: 2332173966020453587}
   - component: {fileID: 1491860686807319188}
   m_Layer: 9
@@ -4902,20 +4886,6 @@ Transform:
   m_Father: {fileID: 5934020636853407732}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8522737621602519061
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4139569476126940701}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e359208ebd574f18a040c14e041deb9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxAngle: 180
-  useAverage: 1
 --- !u!70 &2332173966020453587
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -5402,6 +5372,58 @@ MonoBehaviour:
   groundSpeedStart: 8
   jumpGroundVelStart: 14
   foods:
+  - type: 0
+    sizeContribution:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 1
+        outSlope: 1
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 100
+        value: 100
+        inSlope: 1
+        outSlope: 1
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 0
+    featureUnlock: 0
+  - type: 1
+    sizeContribution:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 1
+        outSlope: 1
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 100
+        value: 100
+        inSlope: 1
+        outSlope: 1
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 0
+    featureUnlock: 0
   - type: 2
     sizeContribution:
       serializedVersion: 2
@@ -5416,8 +5438,60 @@ MonoBehaviour:
         inWeight: 0
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 10
-        value: 10
+        time: 100
+        value: 100
+        inSlope: 1
+        outSlope: 1
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 0
+    featureUnlock: 0
+  - type: 3
+    sizeContribution:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 1
+        outSlope: 1
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 100
+        value: 100
+        inSlope: 1
+        outSlope: 1
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 0
+    featureUnlock: 0
+  - type: 5
+    sizeContribution:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 1
+        outSlope: 1
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 100
+        value: 100
         inSlope: 1
         outSlope: 1
         tangentMode: 34

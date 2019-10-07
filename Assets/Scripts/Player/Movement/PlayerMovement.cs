@@ -72,6 +72,7 @@ public class PlayerMovement : MonoBehaviour {
     public WallDetach WallDetachState { get; set; }
     public bool IsStunned { get; set; }
     public Collider2D WallCollider { get; set; }
+    private Vector3 normal;
     public Vector3 Normal { get; set; }
     public Vector2 ExtraVel { get; set; }
     public Input ForcedInput = null;
