@@ -82,17 +82,11 @@ PrefabInstance:
       propertyPath: walkGroundSpeed
       value: 20
       objectReference: {fileID: 0}
-    - target: {fileID: 5722158506643233597, guid: 8054d68ab9e0c6946841c2a97c717af5,
+    - target: {fileID: -3562641943232777133, guid: 8054d68ab9e0c6946841c2a97c717af5,
         type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 6914455548436797895, guid: a6a044f896e1eba47b11f36911fabf8c,
-        type: 3}
-    - target: {fileID: -3831407154851879088, guid: 8054d68ab9e0c6946841c2a97c717af5,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 9d1393b290b4d444d92abba7fa257c8c, type: 2}
+      propertyPath: _energeticValue
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1128032939923079544, guid: 8054d68ab9e0c6946841c2a97c717af5,
         type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
@@ -103,15 +97,26 @@ PrefabInstance:
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 0.57779294
       objectReference: {fileID: 0}
-    - target: {fileID: -8514458385759924914, guid: 8054d68ab9e0c6946841c2a97c717af5,
-        type: 3}
-      propertyPath: _name
-      value: ANT
-      objectReference: {fileID: 0}
     - target: {fileID: 1773057203176079919, guid: 8054d68ab9e0c6946841c2a97c717af5,
         type: 3}
       propertyPath: myType
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -3831407154851879088, guid: 8054d68ab9e0c6946841c2a97c717af5,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 9d1393b290b4d444d92abba7fa257c8c, type: 2}
+    - target: {fileID: 5722158506643233597, guid: 8054d68ab9e0c6946841c2a97c717af5,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 6914455548436797895, guid: a6a044f896e1eba47b11f36911fabf8c,
+        type: 3}
+    - target: {fileID: -8514458385759924914, guid: 8054d68ab9e0c6946841c2a97c717af5,
+        type: 3}
+      propertyPath: _name
+      value: ANT
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8054d68ab9e0c6946841c2a97c717af5, type: 3}
