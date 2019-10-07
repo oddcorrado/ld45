@@ -37,10 +37,16 @@ public class AiInput : MonoBehaviour
 
     void Update()
     {
+        
+
+        var playerScale = Mathf.Abs(player.localScale.x / 30);
+        var selfScale = Mathf.Abs(GetComponentInParent<AiMovement>().transform.localScale.x);
+        var multiplier = facingLeft ? 1 : -1;
+
         myText.transform.localScale = new Vector3(
-            Mathf.Abs(myText.transform.localScale.x) * Mathf.Sign(transform.localScale.x), 
-            Mathf.Abs(myText.transform.localScale.y) * Mathf.Sign(transform.localScale.y), 
-            Mathf.Abs(myText.transform.localScale.z) * Mathf.Sign(transform.localScale.z));
+            multiplier * playerScale / selfScale, 
+            playerScale / selfScale, 
+            playerScale / selfScale);
 
         switch (myState)
         {
@@ -115,6 +121,7 @@ public class AiInput : MonoBehaviour
             case AiType.Hiding:
                 if (shelterList != null && shelterList.Count > 0)
                 {
+                    foreach (var elt in shelterList) if (elt == null) shelterList.Remove(elt);
                     List<Transform> sorted = shelterList.OrderBy(o => Mathf.Abs(o.position.x - transform.position.x)).ToList();
                     chosenShelter = sorted[0];
                 }

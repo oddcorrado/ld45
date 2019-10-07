@@ -58,6 +58,7 @@ public class PlayerMovementGroundSticky : PlayerMovement
     protected float horLock;
     private Vector3 jumpNormal;
     private ParticleSystem.MainModule partSystem;
+    public bool CanJump { get; set; }
 
     private float sizeMul = 1;
     public float SizeMul
@@ -278,6 +279,8 @@ public class PlayerMovementGroundSticky : PlayerMovement
 
     protected virtual Vector3 Jump(Vector3 vel)
     {
+        if (!CanJump) return vel;
+
         if (IsGrabbing)
         {
             animationManager.Movement = animationLedge;

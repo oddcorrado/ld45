@@ -80,12 +80,12 @@ PrefabInstance:
     - target: {fileID: 4707463030529669934, guid: 8054d68ab9e0c6946841c2a97c717af5,
         type: 3}
       propertyPath: walkGroundSpeed
-      value: 50
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: -3562641943232777133, guid: 8054d68ab9e0c6946841c2a97c717af5,
         type: 3}
       propertyPath: _energeticValue
-      value: 15
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: -3562641943232777133, guid: 8054d68ab9e0c6946841c2a97c717af5,
         type: 3}
@@ -126,12 +126,7 @@ PrefabInstance:
     - target: {fileID: -8514458385759924914, guid: 8054d68ab9e0c6946841c2a97c717af5,
         type: 3}
       propertyPath: _name
-      value: Human
-      objectReference: {fileID: 0}
-    - target: {fileID: -8514458385759924914, guid: 8054d68ab9e0c6946841c2a97c717af5,
-        type: 3}
-      propertyPath: _sizeMulMin
-      value: 64
+      value: RABBIT
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8054d68ab9e0c6946841c2a97c717af5, type: 3}
