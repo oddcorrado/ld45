@@ -199,7 +199,7 @@ public class PlayerMovementGroundSticky : PlayerMovement
             }
             else if (!IsWalled && WallDetachState == WallDetach.CONTROL)
             {
-                newVel = new Vector3(walkGroundSpeed * hor, 0, 0);
+                newVel = new Vector3(walkGroundSpeed * hor * sizeMul, 0, 0);
                 var ai = airInertia <= Mathf.Epsilon ? 0f : 0.9f + airInertia * 0.01f;
                 // Debug.Log(vel.x + " " + newVel.x);
                 vel.x = newVel.x * (1 - ai) + vel.x * ai;
