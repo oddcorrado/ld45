@@ -448,6 +448,7 @@ MonoBehaviour:
   myText: {fileID: 2866512918874759000}
   player: {fileID: 0}
   myType: 0
+  myNature: 0
   shelterList: []
   horizontalSpeed: 0
   verticalSpeed: 0
@@ -652,7 +653,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -678,16 +679,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 9194530158642389092}
     m_Modifications:
-    - target: {fileID: 2628004541822473436, guid: 67b8872bb4c4f4e6cb3faa0fbe9d3f8f,
-        type: 3}
-      propertyPath: m_Name
-      value: PxConditionStun
-      objectReference: {fileID: 0}
-    - target: {fileID: 2628004541822473436, guid: 67b8872bb4c4f4e6cb3faa0fbe9d3f8f,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 250622029823187507, guid: 67b8872bb4c4f4e6cb3faa0fbe9d3f8f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -743,6 +734,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2628004541822473436, guid: 67b8872bb4c4f4e6cb3faa0fbe9d3f8f,
+        type: 3}
+      propertyPath: m_Name
+      value: PxConditionStun
+      objectReference: {fileID: 0}
+    - target: {fileID: 2628004541822473436, guid: 67b8872bb4c4f4e6cb3faa0fbe9d3f8f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 67b8872bb4c4f4e6cb3faa0fbe9d3f8f, type: 3}
 --- !u!4 &2040810104974907647 stripped
@@ -758,16 +759,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 9194530158642389092}
     m_Modifications:
-    - target: {fileID: 2503440275696851979, guid: 8599223a44a8e487e9fb6d6a08151366,
-        type: 3}
-      propertyPath: m_Name
-      value: PxConditionFrozen
-      objectReference: {fileID: 0}
-    - target: {fileID: 2503440275696851979, guid: 8599223a44a8e487e9fb6d6a08151366,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 413468009468760804, guid: 8599223a44a8e487e9fb6d6a08151366,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -821,6 +812,16 @@ PrefabInstance:
     - target: {fileID: 413468009468760804, guid: 8599223a44a8e487e9fb6d6a08151366,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2503440275696851979, guid: 8599223a44a8e487e9fb6d6a08151366,
+        type: 3}
+      propertyPath: m_Name
+      value: PxConditionFrozen
+      objectReference: {fileID: 0}
+    - target: {fileID: 2503440275696851979, guid: 8599223a44a8e487e9fb6d6a08151366,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

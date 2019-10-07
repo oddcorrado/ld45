@@ -31,12 +31,6 @@ public class AudioController : MonoBehaviour
         get { return _land; }
     }
 
-    private AudioSource _intro;
-    public AudioSource Intro
-    {
-        get { return _intro; }
-    }
-
     private void Start()
     {
         _blob = GameObject.Find("BlobSticky");
@@ -52,7 +46,6 @@ public class AudioController : MonoBehaviour
         _jump = transform.Find("Jump").GetComponent<AudioSource>();
         _eat = transform.Find("Eat").GetComponent<AudioSource>();
         _land = transform.Find("Land").GetComponent<AudioSource>();
-        _intro = transform.Find("ThemeMainMenu").GetComponent<AudioSource>();
     }
 
     private void Update()

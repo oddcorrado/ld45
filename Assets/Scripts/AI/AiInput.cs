@@ -9,6 +9,7 @@ public class AiInput : MonoBehaviour
     public Text myText;
     public Transform player;
     public AiType myType;
+    public AiNature myNature;
 
     public List<Transform> shelterList;
     private Transform chosenShelter;
@@ -135,24 +136,7 @@ public class AiInput : MonoBehaviour
     {
         if (myText != null)
         {
-            switch (myState)
-            {
-                case AiState.Idle:
-                    myText.text = "I'm idle !";
-                    break;
-                case AiState.Walking:
-                    myText.text = facingLeft ? "I'm walking left !" : "I'm walking right !";
-                    break;
-                case AiState.Fleeing:
-                    myText.text = "I'm fleeing !";
-                    break;
-                case AiState.SeekingShelter:
-                    myText.text = "I'm seeking shelter !";
-                    break;
-                case AiState.Hiding:
-                    myText.text = "I'm hiding !";
-                    break;
-            }
+            myText.text = AiDictionnary.dictionnary[(int)myNature, (int)myState][(int)(Random.value * AiDictionnary.dictionnary[(int)myNature, (int)myState].Length)];
         }
     }
 

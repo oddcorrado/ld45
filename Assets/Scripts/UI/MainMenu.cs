@@ -5,9 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    private GameObject _soundController;
-    private AudioController _audioEat;
-
     public void QuitGame()
     {
 #if UNITY_EDITOR
@@ -19,10 +16,6 @@ public class MainMenu : MonoBehaviour
 
     private void Start()
     {
-        _soundController = GameObject.Find("SoundController");
-        if (_soundController != null)
-            _audioEat = _soundController.transform.GetComponent<AudioController>();
-
         Time.timeScale = 1;
     }
 
@@ -36,7 +29,6 @@ public class MainMenu : MonoBehaviour
 
     public void PlayGame()
     {
-        _audioEat.Intro.Stop();
         SceneManager.LoadScene(1);
     }
 
