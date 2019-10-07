@@ -48,6 +48,6 @@ public class CameraSimple: MonoBehaviour
 
         transform.position = position;
 
-        cam.orthographicSize = 3 * f;
+        cam.orthographicSize = 3 * Mathf.Pow(f, 1.3f);
     }
 }
