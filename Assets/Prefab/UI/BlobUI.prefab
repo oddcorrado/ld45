@@ -419,7 +419,7 @@ RectTransform:
   m_GameObject: {fileID: 322650066669277861}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.35816246, y: 0.35816246, z: 0.35816246}
+  m_LocalScale: {x: 0.14953823, y: 0.14953823, z: 0.14953823}
   m_Children:
   - {fileID: 275567288629345174}
   - {fileID: 322650067566854250}
@@ -429,9 +429,9 @@ RectTransform:
   m_Father: {fileID: 322650067857824408}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 372, y: -34}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: -1.3019, y: -22.6}
   m_SizeDelta: {x: 1800, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &322650066669277529
@@ -546,7 +546,7 @@ RectTransform:
   m_GameObject: {fileID: 322650066670009377}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.50282, y: 0.50282, z: 0.50282}
+  m_LocalScale: {x: 0.88013613, y: 0.88013613, z: 0.88013613}
   m_Children: []
   m_Father: {fileID: 322650066669277530}
   m_RootOrder: 2
@@ -582,7 +582,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 32b450ffbf5dc4febb37c323a7b7f634, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cb1c66f592325124ea4acd6fbc103d0b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1554,14 +1554,14 @@ RectTransform:
   m_GameObject: {fileID: 5244090555906919289}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.50282, y: 0.50282, z: 0.50282}
+  m_LocalScale: {x: 0.8135125, y: 0.8135125, z: 0.8135125}
   m_Children: []
   m_Father: {fileID: 322650066669277530}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -46, y: -25}
+  m_AnchoredPosition: {x: -54, y: -25}
   m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6558767949892300649
@@ -1590,7 +1590,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 10c856077f20a4a4581b5d9023469947, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 33da73c18dea3e74c91733af1770b28b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

@@ -1,0 +1,511 @@
+fileFormatVersion: 2
+guid: 0c8524b39196c7540b60476cd82abb5d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3092302899195984585
+    second: humain_sheet_1_0
+  - first:
+      213: 3373720803539470976
+    second: humain_sheet_1_1
+  - first:
+      213: -8659288930690150212
+    second: humain_sheet_1_2
+  - first:
+      213: 9097669445175080839
+    second: humain_sheet_1_3
+  - first:
+      213: -5211632996518601362
+    second: humain_sheet_1_4
+  - first:
+      213: -4697044472420495794
+    second: humain_sheet_1_5
+  - first:
+      213: -3097994887877416959
+    second: humain_sheet_1_6
+  - first:
+      213: -8846405233867318538
+    second: humain_sheet_1_7
+  - first:
+      213: 7631886964734939614
+    second: humain_sheet_1_8
+  - first:
+      213: -7188387081476212671
+    second: humain_sheet_1_9
+  - first:
+      213: 3670430053881659570
+    second: humain_sheet_1_10
+  - first:
+      213: 295116303484931256
+    second: humain_sheet_1_11
+  - first:
+      213: 8527836008653460077
+    second: humain_sheet_1_12
+  - first:
+      213: -8487897237976188178
+    second: humain_sheet_1_13
+  - first:
+      213: 8766880583917797790
+    second: humain_sheet_1_14
+  - first:
+      213: -8061330248771176716
+    second: humain_sheet_1_15
+  - first:
+      213: 3459313295740252249
+    second: humain_sheet_1_16
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: humain_sheet_1_0
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 0
+        width: 281
+        height: 640
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a362b1328854a1b45b89737eed7eb428
+      internalID: 3092302899195984585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: humain_sheet_1_1
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 0
+        width: 398
+        height: 640
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3263b75cdbf74c249aae6b25017dd3ac
+      internalID: 3373720803539470976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: humain_sheet_1_2
+      rect:
+        serializedVersion: 2
+        x: 1405
+        y: 45
+        width: 361
+        height: 453
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c19420c5d6a70b41b640e704eaa8d6c
+      internalID: -8659288930690150212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: humain_sheet_1_3
+      rect:
+        serializedVersion: 2
+        x: 2027
+        y: 0
+        width: 382
+        height: 640
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 813455f4c1746cf489509d55fb227095
+      internalID: 9097669445175080839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: humain_sheet_1_4
+      rect:
+        serializedVersion: 2
+        x: 2664
+        y: 0
+        width: 383
+        height: 640
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec3855cc6e14f574fa0e331632845baa
+      internalID: -5211632996518601362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: humain_sheet_1_5
+      rect:
+        serializedVersion: 2
+        x: 3296
+        y: 0
+        width: 399
+        height: 640
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0ea1d7099bbb9b499a8afbc78cb95f8
+      internalID: -4697044472420495794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: humain_sheet_1_6
+      rect:
+        serializedVersion: 2
+        x: 3966
+        y: 35
+        width: 361
+        height: 469
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64d2b38028c86464ea5113217c2a9907
+      internalID: -3097994887877416959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: humain_sheet_1_7
+      rect:
+        serializedVersion: 2
+        x: 4603
+        y: 0
+        width: 372
+        height: 640
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1a66c6eba22b954ebcaa8ce3357d320
+      internalID: -8846405233867318538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: humain_sheet_1_8
+      rect:
+        serializedVersion: 2
+        x: 5225
+        y: 0
+        width: 382
+        height: 640
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a10e6319a7ac9f742a593043db5fba58
+      internalID: 7631886964734939614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: humain_sheet_1_9
+      rect:
+        serializedVersion: 2
+        x: 5796
+        y: 0
+        width: 529
+        height: 501
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56ad7b3d40de69343855d987f5f880b5
+      internalID: -7188387081476212671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: humain_sheet_1_10
+      rect:
+        serializedVersion: 2
+        x: 6443
+        y: 0
+        width: 524
+        height: 501
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f499201a9747a4c41a024da27cabbddd
+      internalID: 3670430053881659570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: humain_sheet_1_11
+      rect:
+        serializedVersion: 2
+        x: 7095
+        y: 0
+        width: 510
+        height: 482
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cb44580a4fd7864db85392098a1a1eb
+      internalID: 295116303484931256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: humain_sheet_1_12
+      rect:
+        serializedVersion: 2
+        x: 7719
+        y: 0
+        width: 535
+        height: 482
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5895bc214384cb34cb95be6576f2261b
+      internalID: 8527836008653460077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: humain_sheet_1_13
+      rect:
+        serializedVersion: 2
+        x: 8369
+        y: 0
+        width: 510
+        height: 501
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e01e2265561116045a01fa15590cae5d
+      internalID: -8487897237976188178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: humain_sheet_1_14
+      rect:
+        serializedVersion: 2
+        x: 8996
+        y: 0
+        width: 532
+        height: 501
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9a289821c32b364a8a1dcde01001f41
+      internalID: 8766880583917797790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: humain_sheet_1_15
+      rect:
+        serializedVersion: 2
+        x: 9655
+        y: 0
+        width: 510
+        height: 498
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d85803ef8bc94a4c848270365d1d4e5
+      internalID: -8061330248771176716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: humain_sheet_1_16
+      rect:
+        serializedVersion: 2
+        x: 10278
+        y: 0
+        width: 530
+        height: 507
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea416fe19f8b64949bcf1d45e2315659
+      internalID: 3459313295740252249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
