@@ -121,6 +121,7 @@ public class AiInput : MonoBehaviour
             case AiType.Hiding:
                 if (shelterList != null && shelterList.Count > 0)
                 {
+                    foreach (var elt in shelterList) if (elt == null) shelterList.Remove(elt);
                     List<Transform> sorted = shelterList.OrderBy(o => Mathf.Abs(o.position.x - transform.position.x)).ToList();
                     chosenShelter = sorted[0];
                 }
