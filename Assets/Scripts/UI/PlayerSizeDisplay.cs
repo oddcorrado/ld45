@@ -13,7 +13,7 @@ public class PlayerSizeDisplay : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        script = rabbits.GetComponent<PlayerMovementGroundSticky>();
+        script = GameObject.FindObjectOfType<PlayerMovementGroundSticky>();
         text = GetComponent<Text>();
     }
 

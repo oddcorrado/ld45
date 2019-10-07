@@ -82,11 +82,6 @@ PrefabInstance:
       propertyPath: walkGroundSpeed
       value: 40
       objectReference: {fileID: 0}
-    - target: {fileID: -3831407154851879088, guid: 8054d68ab9e0c6946841c2a97c717af5,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: e438a4c13db4aab46bd6af11a3eba599, type: 2}
     - target: {fileID: -3562641943232777133, guid: 8054d68ab9e0c6946841c2a97c717af5,
         type: 3}
       propertyPath: _energeticValue
@@ -103,11 +98,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -9109457119832188450, guid: cf7c6a6defeffa043a147f8f9446ff10,
         type: 3}
-    - target: {fileID: -8514458385759924914, guid: 8054d68ab9e0c6946841c2a97c717af5,
+    - target: {fileID: -3831407154851879088, guid: 8054d68ab9e0c6946841c2a97c717af5,
         type: 3}
-      propertyPath: _name
-      value: RABBIT
-      objectReference: {fileID: 0}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: e438a4c13db4aab46bd6af11a3eba599, type: 2}
     - target: {fileID: 1128032939923079544, guid: 8054d68ab9e0c6946841c2a97c717af5,
         type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
@@ -127,6 +122,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Size.y
       value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: -8514458385759924914, guid: 8054d68ab9e0c6946841c2a97c717af5,
+        type: 3}
+      propertyPath: _name
+      value: RABBIT
+      objectReference: {fileID: 0}
+    - target: {fileID: 2705237554378876663, guid: 8054d68ab9e0c6946841c2a97c717af5,
+        type: 3}
+      propertyPath: maxAngle
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8054d68ab9e0c6946841c2a97c717af5, type: 3}
