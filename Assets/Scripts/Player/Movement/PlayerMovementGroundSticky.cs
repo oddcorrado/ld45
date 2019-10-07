@@ -57,6 +57,7 @@ public class PlayerMovementGroundSticky : PlayerMovement
     protected CrouchBlocker crouchBlocker;
     protected float horLock;
     private Vector3 jumpNormal;
+    private ParticleSystem.MainModule partSystem;
 
     private float sizeMul = 1;
     public float SizeMul
@@ -110,6 +111,13 @@ public class PlayerMovementGroundSticky : PlayerMovement
         Debug.Assert(crouchBlocker != null, "could not find CrouchBlocker");
 
         Debug.Log(name + " " + walkGroundSpeed);
+
+        //Search Particle system
+        Transform pxBlob = transform.Find("PxBlobs");
+        Debug.Assert(pxBlob != null, "could not find PxBlobs");
+        Transform rabbits = pxBlob.transform.Find("Rabbits");
+        Debug.Assert(rabbits != null, "could not find Rabbits");
+        partSystem = rabbits.GetComponent<ParticleSystem>().main;
 
         //Physics2D.gravity = Vector2.zero;
         Debug.Log(name + " " + playerCondition);
@@ -220,6 +228,7 @@ public class PlayerMovementGroundSticky : PlayerMovement
         vel.y += ExtraVel.y;
         vel.x += ExtraVel.x;
         ExtraVel *= 0.9f; // FIXME
+
 
         vel.y = Mathf.Max(vel.y, -maxGravityVelocity *  sizeMul);
 
@@ -377,7 +386,9 @@ public class PlayerMovementGroundSticky : PlayerMovement
                         transform.localScale += new Vector3(-0.05f * sizeMul * Mathf.Sign(transform.localScale.x), 0.05f * sizeMul, 1);
                     else */
                         transform.localScale = new Vector3(1 * Mathf.Sign(transform.localScale.x), 1, 1) * sizeMul;
-                }   
+                }
+                partSystem.startLifetimeMultiplier = sizeMul;
+                partSystem.startSizeMultiplier = sizeMul;
             }
         }
 
