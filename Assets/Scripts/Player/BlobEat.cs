@@ -15,6 +15,14 @@ public class BlobEat : MonoBehaviour
         get { return _preys; }
     }
 
+    [System.Serializable]
+    public class PreFood
+    {
+        public string name;
+        public int count;
+    }
+
+    [SerializeField] private PreFood[] preFoods;
     private void Awake()
     {
         _playerMovement = transform.GetComponent<PlayerMovementGroundSticky>();
@@ -24,6 +32,11 @@ public class BlobEat : MonoBehaviour
         _soundController = GameObject.Find("SoundController");
         if (_soundController != null)
             _audioEat = _soundController.transform.GetComponent<AudioController>();
+
+        foreach (var preFood in preFoods)
+        {
+            Preys.Add(preFood.name, preFood.count);
+        }
 
         Debug.Log("audio : " + _audioEat);
 
