@@ -85,7 +85,7 @@ PrefabInstance:
     - target: {fileID: 4707463030529669934, guid: 8054d68ab9e0c6946841c2a97c717af5,
         type: 3}
       propertyPath: walkGroundSpeed
-      value: 30
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 4707463030529669934, guid: 8054d68ab9e0c6946841c2a97c717af5,
         type: 3}

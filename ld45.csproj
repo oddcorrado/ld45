@@ -787,6 +787,7 @@
     <Compile Include="Assets\Scripts\UI\Joystick\SelectJoystick.cs" />
     <Compile Include="Assets\Scripts\UI\MainMenu.cs" />
     <Compile Include="Assets\Scripts\UI\PauseMenu.cs" />
+    <Compile Include="Assets\Scripts\UI\PlayerSizeDisplay.cs" />
     <Compile Include="Assets\Scripts\UI\PlayerStatusDisplay.cs" />
     <Compile Include="Assets\Scripts\UI\UiPlayerFinder.cs" />
   </ItemGroup>
