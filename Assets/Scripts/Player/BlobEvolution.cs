@@ -49,6 +49,7 @@ public class BlobEvolution : MonoBehaviour
             // Debug.Log(key + food.featureUnlock);
             playerMovementGroundSticky.SizeMul = size * 0.1f + playerMovementGroundSticky.SizeMul * 0.9f;
             if (food.featureUnlock == Feature.STICKY && !playerMovementGroundSticky.IsSticky) playerMovementGroundSticky.IsSticky = true;
+            if (food.featureUnlock == Feature.JUMP && !playerMovementGroundSticky.CanJump) playerMovementGroundSticky.CanJump = true;
         }
     }
 }
