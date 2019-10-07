@@ -45,7 +45,7 @@ public class AiInput : MonoBehaviour
         myText.transform.localScale = new Vector3(
             multiplier * playerScale / selfScale, 
             playerScale / selfScale, 
-            playerScale / selfScale);
+            1);
 
         switch (myState)
         {
