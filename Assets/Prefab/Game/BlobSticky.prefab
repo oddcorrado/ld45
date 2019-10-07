@@ -5357,6 +5357,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fd49e53c7a5d7a4d876b56604c1eeab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  preFoods: []
 --- !u!114 &1974513349
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5457,17 +5458,17 @@ MonoBehaviour:
       - serializedVersion: 3
         time: 0
         value: 0
-        inSlope: 1
-        outSlope: 1
+        inSlope: 5.0000505
+        outSlope: 5.0000505
         tangentMode: 34
         weightedMode: 0
         inWeight: 0
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 100
-        value: 100
-        inSlope: 1
-        outSlope: 1
+        time: 99.87263
+        value: 499.36816
+        inSlope: 5.0000505
+        outSlope: 5.0000505
         tangentMode: 34
         weightedMode: 0
         inWeight: 0.33333334
@@ -5589,16 +5590,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 597438454662626468}
     m_Modifications:
-    - target: {fileID: 2503440275696851979, guid: 8599223a44a8e487e9fb6d6a08151366,
-        type: 3}
-      propertyPath: m_Name
-      value: PxConditionFrozen
-      objectReference: {fileID: 0}
-    - target: {fileID: 2503440275696851979, guid: 8599223a44a8e487e9fb6d6a08151366,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 413468009468760804, guid: 8599223a44a8e487e9fb6d6a08151366,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5654,6 +5645,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2503440275696851979, guid: 8599223a44a8e487e9fb6d6a08151366,
+        type: 3}
+      propertyPath: m_Name
+      value: PxConditionFrozen
+      objectReference: {fileID: 0}
+    - target: {fileID: 2503440275696851979, guid: 8599223a44a8e487e9fb6d6a08151366,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8599223a44a8e487e9fb6d6a08151366, type: 3}
 --- !u!1 &2165205107187656531 stripped
@@ -5675,16 +5676,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 597438454662626468}
     m_Modifications:
-    - target: {fileID: 2628004541822473436, guid: 67b8872bb4c4f4e6cb3faa0fbe9d3f8f,
-        type: 3}
-      propertyPath: m_Name
-      value: PxConditionStun
-      objectReference: {fileID: 0}
-    - target: {fileID: 2628004541822473436, guid: 67b8872bb4c4f4e6cb3faa0fbe9d3f8f,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 250622029823187507, guid: 67b8872bb4c4f4e6cb3faa0fbe9d3f8f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5738,6 +5729,16 @@ PrefabInstance:
     - target: {fileID: 250622029823187507, guid: 67b8872bb4c4f4e6cb3faa0fbe9d3f8f,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2628004541822473436, guid: 67b8872bb4c4f4e6cb3faa0fbe9d3f8f,
+        type: 3}
+      propertyPath: m_Name
+      value: PxConditionStun
+      objectReference: {fileID: 0}
+    - target: {fileID: 2628004541822473436, guid: 67b8872bb4c4f4e6cb3faa0fbe9d3f8f,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
