@@ -85,17 +85,22 @@ PrefabInstance:
     - target: {fileID: 4707463030529669934, guid: 8054d68ab9e0c6946841c2a97c717af5,
         type: 3}
       propertyPath: jumpGroundVel
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4707463030529669934, guid: 8054d68ab9e0c6946841c2a97c717af5,
         type: 3}
       propertyPath: jumpWallVel.y
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 4707463030529669934, guid: 8054d68ab9e0c6946841c2a97c717af5,
+        type: 3}
+      propertyPath: diveVel
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: -3562641943232777133, guid: 8054d68ab9e0c6946841c2a97c717af5,
         type: 3}
       propertyPath: _energeticValue
-      value: 30
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: -3562641943232777133, guid: 8054d68ab9e0c6946841c2a97c717af5,
         type: 3}
@@ -110,7 +115,7 @@ PrefabInstance:
     - target: {fileID: -8514458385759924914, guid: 8054d68ab9e0c6946841c2a97c717af5,
         type: 3}
       propertyPath: _sizeMulMin
-      value: 64
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 1128032939923079544, guid: 8054d68ab9e0c6946841c2a97c717af5,
         type: 3}
@@ -125,12 +130,32 @@ PrefabInstance:
     - target: {fileID: 1128032939923079544, guid: 8054d68ab9e0c6946841c2a97c717af5,
         type: 3}
       propertyPath: m_Size.x
-      value: 1.08
+      value: 0.8757923
       objectReference: {fileID: 0}
     - target: {fileID: 1128032939923079544, guid: 8054d68ab9e0c6946841c2a97c717af5,
         type: 3}
       propertyPath: m_Size.y
-      value: 0.7
+      value: 1.680197
+      objectReference: {fileID: 0}
+    - target: {fileID: 1128032939923079544, guid: 8054d68ab9e0c6946841c2a97c717af5,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: -0.04084158
+      objectReference: {fileID: 0}
+    - target: {fileID: 1128032939923079544, guid: 8054d68ab9e0c6946841c2a97c717af5,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 0.01225248
+      objectReference: {fileID: 0}
+    - target: {fileID: 1773057203176079919, guid: 8054d68ab9e0c6946841c2a97c717af5,
+        type: 3}
+      propertyPath: myNature
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1773057203176079919, guid: 8054d68ab9e0c6946841c2a97c717af5,
+        type: 3}
+      propertyPath: myType
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -3831407154851879088, guid: 8054d68ab9e0c6946841c2a97c717af5,
         type: 3}
@@ -143,5 +168,15 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -2508539927094285374, guid: e9f9663baa9ca4840810fec093137b28,
         type: 3}
+    - target: {fileID: 2705237554515617850, guid: 8054d68ab9e0c6946841c2a97c717af5,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.959
+      objectReference: {fileID: 0}
+    - target: {fileID: 2705237554378876662, guid: 8054d68ab9e0c6946841c2a97c717af5,
+        type: 3}
+      propertyPath: m_Radius
+      value: 1.08
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8054d68ab9e0c6946841c2a97c717af5, type: 3}
