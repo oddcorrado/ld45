@@ -390,8 +390,6 @@ public class PlayerMovementGroundSticky : PlayerMovement
                     else */
                         transform.localScale = new Vector3(1 * Mathf.Sign(transform.localScale.x), 1, 1) * sizeMul;
                 }
-                partSystem.startLifetimeMultiplier = sizeMul;
-                partSystem.startSizeMultiplier = sizeMul;
             }
         }
 
@@ -400,7 +398,8 @@ public class PlayerMovementGroundSticky : PlayerMovement
 
     protected virtual void FixedUpdate()
     {
-        CanCrouch();
+        partSystem.startLifetimeMultiplier = sizeMul;
+        partSystem.startSizeMultiplier = sizeMul;
         var vel = body.velocity;
         if (!IsWalled && !IsLocked) ScaleX();
         // Debug.Log(Normal);

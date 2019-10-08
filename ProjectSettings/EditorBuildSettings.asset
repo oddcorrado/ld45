@@ -11,10 +11,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TestSceneCyril.unity
     guid: 262ce83167c8f644eb5a216a9cbec71f
-  - enabled: 0
-    path: Assets/Scenes/TestSceneMarvin.unity
-    guid: 1e0e97af4fe330b44b8c7c6cddfcb868
-  - enabled: 0
-    path: Assets/Scenes/TestSceneCorrado.unity
-    guid: b7264d9e73d604cdfa264a022e0a9eba
   m_configObjects: {}
