@@ -85,12 +85,12 @@ PrefabInstance:
     - target: {fileID: 4707463030529669934, guid: 8054d68ab9e0c6946841c2a97c717af5,
         type: 3}
       propertyPath: walkGroundSpeed
-      value: 30
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 4707463030529669934, guid: 8054d68ab9e0c6946841c2a97c717af5,
         type: 3}
       propertyPath: jumpGroundVel
-      value: 65
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 4707463030529669934, guid: 8054d68ab9e0c6946841c2a97c717af5,
         type: 3}
@@ -107,6 +107,21 @@ PrefabInstance:
       propertyPath: diveVel
       value: 25
       objectReference: {fileID: 0}
+    - target: {fileID: 4707463030529669934, guid: 8054d68ab9e0c6946841c2a97c717af5,
+        type: 3}
+      propertyPath: gravity.y
+      value: -60
+      objectReference: {fileID: 0}
+    - target: {fileID: 4707463030529669934, guid: 8054d68ab9e0c6946841c2a97c717af5,
+        type: 3}
+      propertyPath: maxGravityVelocity
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 4707463030529669934, guid: 8054d68ab9e0c6946841c2a97c717af5,
+        type: 3}
+      propertyPath: airInertia
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -3562641943232777133, guid: 8054d68ab9e0c6946841c2a97c717af5,
         type: 3}
       propertyPath: _energeticValue
@@ -117,15 +132,20 @@ PrefabInstance:
       propertyPath: _maximumEnergy
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 1773057203176079919, guid: 8054d68ab9e0c6946841c2a97c717af5,
+        type: 3}
+      propertyPath: myNature
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1773057203176079919, guid: 8054d68ab9e0c6946841c2a97c717af5,
+        type: 3}
+      propertyPath: myType
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -8514458385759924914, guid: 8054d68ab9e0c6946841c2a97c717af5,
         type: 3}
       propertyPath: _sizeMulMin
       value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 2705237554378876663, guid: 8054d68ab9e0c6946841c2a97c717af5,
-        type: 3}
-      propertyPath: maxAngle
-      value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 1128032939923079544, guid: 8054d68ab9e0c6946841c2a97c717af5,
         type: 3}
@@ -137,15 +157,10 @@ PrefabInstance:
       propertyPath: m_Size.x
       value: 0.93776697
       objectReference: {fileID: 0}
-    - target: {fileID: 1773057203176079919, guid: 8054d68ab9e0c6946841c2a97c717af5,
+    - target: {fileID: 2705237554378876663, guid: 8054d68ab9e0c6946841c2a97c717af5,
         type: 3}
-      propertyPath: myNature
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1773057203176079919, guid: 8054d68ab9e0c6946841c2a97c717af5,
-        type: 3}
-      propertyPath: myType
-      value: 0
+      propertyPath: maxAngle
+      value: 70
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8054d68ab9e0c6946841c2a97c717af5, type: 3}

@@ -22,7 +22,7 @@ public class Final : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(playerMovementGroundSticky.SizeMul > 80 && finalCoroutine == null)
+        if(playerMovementGroundSticky.SizeMul > 200 && finalCoroutine == null)
         {
             finalCoroutine = StartCoroutine(FinalSequence());
         }

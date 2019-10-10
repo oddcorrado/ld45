@@ -54,18 +54,19 @@ public class AiInput : MonoBehaviour
                 else if(Time.time - stateChangeTime > lastCooldownTime)
                 {
                     facingLeft = Random.value > 0.5;
-                    var speed = facingLeft? -Mathf.Abs(transform.localScale.x) : Mathf.Abs(transform.localScale.x);
+                    var speed = facingLeft? -1 : 1; // -Mathf.Abs(transform.localScale.x) : Mathf.Abs(transform.localScale.x);
 
-                    SwitchState(speed, 3 + 2 * Random.value, AiState.Walking);
+                    SwitchState(speed, 1 + 2 * Random.value, AiState.Walking);
                 }
                 break;
 
             case AiState.Walking:
                 if (SeePlayer()) React();
-                else if (Time.time - stateChangeTime > lastCooldownTime) SwitchState(0, 3 * Random.value, AiState.Idle);
+                else if (Time.time - stateChangeTime > lastCooldownTime) SwitchState(0, 1 * Random.value, AiState.Idle);
                 break;
 
             case AiState.Fleeing:
+                horizontalSpeed = player.transform.position.x < transform.position.x ? 1 : -1;
                 if(Time.time - stateChangeTime > lastCooldownTime)
                 {
                     facingLeft = !facingLeft;
@@ -76,7 +77,7 @@ public class AiInput : MonoBehaviour
 
             case AiState.SeekingShelter:
                 facingLeft = chosenShelter.position.x < transform.position.x;
-                horizontalSpeed = facingLeft ? -Mathf.Abs(transform.localScale.x) : Mathf.Abs(transform.localScale.x);
+                horizontalSpeed = facingLeft ? -1 : 1; //-Mathf.Abs(transform.localScale.x) : Mathf.Abs(transform.localScale.x);
 
                 if (Mathf.Abs(chosenShelter.position.x - transform.position.x) < Mathf.Abs(transform.localScale.x) / 2)
                 {
@@ -114,7 +115,7 @@ public class AiInput : MonoBehaviour
         {
             case AiType.Jumping:
                 facingLeft = !facingLeft;
-                var speed = facingLeft ? 3 * -Mathf.Abs(transform.localScale.x) : 3 * Mathf.Abs(transform.localScale.x);
+                var speed = facingLeft ? -1 : 1; //3 * -Mathf.Abs(transform.localScale.x) : 3 * Mathf.Abs(transform.localScale.x);
                 SwitchState(speed, 2 + 2 * Random.value, AiState.Fleeing);
                 break;
             case AiType.Hiding:
@@ -125,7 +126,7 @@ public class AiInput : MonoBehaviour
                     chosenShelter = sorted[0];
                 }
                 facingLeft = chosenShelter.position.x < transform.position.x;
-                var speed2 = facingLeft ? 3 * -Mathf.Abs(transform.localScale.x) : 3 * Mathf.Abs(transform.localScale.x);
+                var speed2 = facingLeft ? -1 : 1; // 3 * -Mathf.Abs(transform.localScale.x) : 3 * Mathf.Abs(transform.localScale.x);
                 SwitchState(speed2, 30, AiState.SeekingShelter);
                 break;
         }
@@ -148,9 +149,9 @@ public class AiInput : MonoBehaviour
 
     private bool SeePlayer()
     {
-        bool directionOk = 
-            (facingLeft && player.transform.position.x < transform.position.x && Mathf.Abs(player.transform.position.x - transform.position.x) < Mathf.Abs(transform.localScale.x) * 5) ||
-            (!facingLeft && player.transform.position.x > transform.position.x && Mathf.Abs(player.transform.position.x - transform.position.x) < Mathf.Abs(transform.localScale.x) * 5);
+        bool directionOk = Mathf.Abs(player.transform.position.x - transform.position.x) < Mathf.Abs(transform.localScale.x) * 10;
+           // (facingLeft && player.transform.position.x < transform.position.x && Mathf.Abs(player.transform.position.x - transform.position.x) < Mathf.Abs(transform.localScale.x) * 10) ||
+            // (!facingLeft && player.transform.position.x > transform.position.x && Mathf.Abs(player.transform.position.x - transform.position.x) < Mathf.Abs(transform.localScale.x) * 10);
         //Vector3 targetDirection = (player.transform.position - transform.position).normalized;
         //RaycastHit2D hit = Physics2D.Raycast(transform.position, targetDirection);
 

@@ -92,7 +92,7 @@ public class BlobProgressBarEat : MonoBehaviour
         {
             _background.color = new Color(_background.color.r - 0.05f, 0, 0);
             yield return new WaitForSeconds(0.05f);
-            Debug.Log(_background.color);
+           //  Debug.Log(_background.color);
         }
 
         _background.color = new Color(0, 0, 0, 0.5f);

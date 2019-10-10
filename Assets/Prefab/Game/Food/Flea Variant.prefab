@@ -70,22 +70,28 @@ PrefabInstance:
     - target: {fileID: 4707463030529669934, guid: 8054d68ab9e0c6946841c2a97c717af5,
         type: 3}
       propertyPath: walkGroundSpeed
-      value: 20
+      value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 4707463030529669934, guid: 8054d68ab9e0c6946841c2a97c717af5,
         type: 3}
       propertyPath: jumpGroundVel
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: -3831407154851879088, guid: 8054d68ab9e0c6946841c2a97c717af5,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 068051c3c0bce094db5e217a7236423d, type: 2}
+    - target: {fileID: 5722158506643233597, guid: 8054d68ab9e0c6946841c2a97c717af5,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 3542567336335894200, guid: 90334ad328f75bd45841ad58b9959a02,
+        type: 3}
     - target: {fileID: -8514458385759924914, guid: 8054d68ab9e0c6946841c2a97c717af5,
         type: 3}
       propertyPath: _name
       value: FLEA
-      objectReference: {fileID: 0}
-    - target: {fileID: 2705237554378876663, guid: 8054d68ab9e0c6946841c2a97c717af5,
-        type: 3}
-      propertyPath: maxAngle
-      value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 1128032939923079544, guid: 8054d68ab9e0c6946841c2a97c717af5,
         type: 3}
@@ -107,17 +113,11 @@ PrefabInstance:
       propertyPath: m_Size.y
       value: 0.83
       objectReference: {fileID: 0}
-    - target: {fileID: -3831407154851879088, guid: 8054d68ab9e0c6946841c2a97c717af5,
+    - target: {fileID: 2705237554378876663, guid: 8054d68ab9e0c6946841c2a97c717af5,
         type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 068051c3c0bce094db5e217a7236423d, type: 2}
-    - target: {fileID: 5722158506643233597, guid: 8054d68ab9e0c6946841c2a97c717af5,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 3542567336335894200, guid: 90334ad328f75bd45841ad58b9959a02,
-        type: 3}
+      propertyPath: maxAngle
+      value: 70
+      objectReference: {fileID: 0}
     - target: {fileID: 2705237554378876662, guid: 8054d68ab9e0c6946841c2a97c717af5,
         type: 3}
       propertyPath: m_Radius
