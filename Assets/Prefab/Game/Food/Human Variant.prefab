@@ -85,12 +85,12 @@ PrefabInstance:
     - target: {fileID: 4707463030529669934, guid: 8054d68ab9e0c6946841c2a97c717af5,
         type: 3}
       propertyPath: walkGroundSpeed
-      value: 800
+      value: 4000
       objectReference: {fileID: 0}
     - target: {fileID: 4707463030529669934, guid: 8054d68ab9e0c6946841c2a97c717af5,
         type: 3}
       propertyPath: jumpGroundVel
-      value: 800
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 4707463030529669934, guid: 8054d68ab9e0c6946841c2a97c717af5,
         type: 3}
@@ -110,12 +110,12 @@ PrefabInstance:
     - target: {fileID: 4707463030529669934, guid: 8054d68ab9e0c6946841c2a97c717af5,
         type: 3}
       propertyPath: gravity.y
-      value: -40
+      value: -1000
       objectReference: {fileID: 0}
     - target: {fileID: 4707463030529669934, guid: 8054d68ab9e0c6946841c2a97c717af5,
         type: 3}
       propertyPath: maxGravityVelocity
-      value: 800
+      value: 2000
       objectReference: {fileID: 0}
     - target: {fileID: -3831407154851879088, guid: 8054d68ab9e0c6946841c2a97c717af5,
         type: 3}
@@ -146,7 +146,7 @@ PrefabInstance:
     - target: {fileID: 1773057203176079919, guid: 8054d68ab9e0c6946841c2a97c717af5,
         type: 3}
       propertyPath: myType
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8514458385759924914, guid: 8054d68ab9e0c6946841c2a97c717af5,
         type: 3}
@@ -156,7 +156,7 @@ PrefabInstance:
     - target: {fileID: -8514458385759924914, guid: 8054d68ab9e0c6946841c2a97c717af5,
         type: 3}
       propertyPath: _sizeMulMin
-      value: 15
+      value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 1128032939923079544, guid: 8054d68ab9e0c6946841c2a97c717af5,
         type: 3}

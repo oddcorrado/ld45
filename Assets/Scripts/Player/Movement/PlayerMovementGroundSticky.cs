@@ -57,7 +57,7 @@ public class PlayerMovementGroundSticky : PlayerMovement
     protected CrouchBlocker crouchBlocker;
     protected float horLock;
     private Vector3 jumpNormal;
-    private ParticleSystem.MainModule partSystem;
+    private ParticleSystem partSystem;
     public bool CanJump { get; set; }
 
     private float sizeMul = 1;
@@ -118,7 +118,7 @@ public class PlayerMovementGroundSticky : PlayerMovement
         Debug.Assert(pxBlob != null, "could not find PxBlobs");
         Transform rabbits = pxBlob.transform.Find("Rabbits");
         Debug.Assert(rabbits != null, "could not find Rabbits");
-        partSystem = rabbits.GetComponent<ParticleSystem>().main;
+        partSystem = rabbits.GetComponent<ParticleSystem>();
 
         //Physics2D.gravity = Vector2.zero;
         Debug.Log(name + " " + playerCondition);
@@ -398,8 +398,13 @@ public class PlayerMovementGroundSticky : PlayerMovement
 
     protected virtual void FixedUpdate()
     {
-        partSystem.startLifetimeMultiplier = sizeMul;
-        partSystem.startSizeMultiplier = sizeMul;
+        var m = partSystem.main;
+        m.startLifetimeMultiplier = sizeMul;
+        m.startSizeMultiplier = sizeMul;
+        var pow = Mathf.Pow(sizeMul, 0.1f);
+        m.startLifetime = new ParticleSystem.MinMaxCurve(5 / pow , 10 / pow);
+        var em = partSystem.emission;
+        em.rate = 30 * pow;
         var vel = body.velocity;
         if (!IsWalled && !IsLocked) ScaleX();
         // Debug.Log(Normal);

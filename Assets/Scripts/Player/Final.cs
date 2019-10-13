@@ -22,7 +22,7 @@ public class Final : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(playerMovementGroundSticky.SizeMul > 200 && finalCoroutine == null)
+        if(playerMovementGroundSticky.SizeMul > 190 && finalCoroutine == null)
         {
             finalCoroutine = StartCoroutine(FinalSequence());
         }
@@ -41,7 +41,7 @@ public class Final : MonoBehaviour
         {
             body.velocity = new Vector3(0, 0, 0);
             transform.position += 2 * playerMovementGroundSticky.SizeMul
-                * new Vector3(Random.value - 0.5f, Random.value - 0.5f, Random.value - 0.5f);
+                * new Vector3(Random.value - 0.5f, Random.value - 0.5f, 0);
             // playerMovementGroundSticky.SizeMul *= 1.1f;
             yield return new WaitForSeconds(0.01f);
         }

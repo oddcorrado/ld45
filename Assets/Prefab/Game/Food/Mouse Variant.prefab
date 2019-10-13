@@ -85,12 +85,12 @@ PrefabInstance:
     - target: {fileID: 4707463030529669934, guid: 8054d68ab9e0c6946841c2a97c717af5,
         type: 3}
       propertyPath: walkGroundSpeed
-      value: 200
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 4707463030529669934, guid: 8054d68ab9e0c6946841c2a97c717af5,
         type: 3}
       propertyPath: jumpGroundVel
-      value: 200
+      value: 250
       objectReference: {fileID: 0}
     - target: {fileID: 4707463030529669934, guid: 8054d68ab9e0c6946841c2a97c717af5,
         type: 3}
@@ -125,7 +125,7 @@ PrefabInstance:
     - target: {fileID: -3562641943232777133, guid: 8054d68ab9e0c6946841c2a97c717af5,
         type: 3}
       propertyPath: _energeticValue
-      value: 11
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: -3562641943232777133, guid: 8054d68ab9e0c6946841c2a97c717af5,
         type: 3}
@@ -145,7 +145,7 @@ PrefabInstance:
     - target: {fileID: -8514458385759924914, guid: 8054d68ab9e0c6946841c2a97c717af5,
         type: 3}
       propertyPath: _sizeMulMin
-      value: 8
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 1128032939923079544, guid: 8054d68ab9e0c6946841c2a97c717af5,
         type: 3}

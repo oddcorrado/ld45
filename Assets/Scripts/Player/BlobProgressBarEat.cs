@@ -16,7 +16,10 @@ public class BlobProgressBarEat : MonoBehaviour
     private AnimationCurve _curveDecreaseFood;
 
     [SerializeField]
-    private float _decreaseRate = 1f;    
+    private float _decreaseRate = 1f;   
+
+    [SerializeField]
+    private PlayerMovementGroundSticky playerMovementGroundSticky; 
 
     private Color _startColor;
     private Image _progress;
@@ -101,9 +104,11 @@ public class BlobProgressBarEat : MonoBehaviour
 
     private IEnumerator DecreaseHunger()
     {
+        
         while(Value > 0)
         {
-            Value -= _curveDecreaseFood.Evaluate(_valueProgressBarMax);
+            Debug.Log(playerMovementGroundSticky.SizeMul);
+            Value -= _curveDecreaseFood.Evaluate(_valueProgressBarMax) * Mathf.Pow(playerMovementGroundSticky.SizeMul, 0.1f);
             yield return new WaitForSeconds(_decreaseRate);
         }
 
