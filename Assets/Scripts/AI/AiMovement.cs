@@ -49,11 +49,16 @@ public class AiMovement : AiMovementBase
     // private fields
     //protected PlayerCondition playerCondition;
     protected AnimationManager animationManager;
-    protected float jumpStartDate = 0;
-    protected bool inJump = false;
+    protected float jumpStartDate = 0;    
     protected bool inWallJump = false;
     protected AiGroundTester groundTester;
     protected float horLock;
+    protected bool inJump = false;
+
+    public bool InJump
+    {
+        get { return inJump; }
+    }
 
     public float WalkGroundSpeed { get { return walkGroundSpeed; } set { walkGroundSpeed = value; } }
 

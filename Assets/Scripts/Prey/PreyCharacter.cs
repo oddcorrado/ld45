@@ -20,6 +20,7 @@ public class PreyCharacter : MonoBehaviour
 
     private Animator _animator;
     private Rigidbody2D _rigidbody;
+    private AiMovement _aiMovement;
     private string _currentLayerName;
 
     public bool IsMoving
@@ -34,6 +35,7 @@ public class PreyCharacter : MonoBehaviour
     {
         _animator = GetComponent<Animator>();
         _rigidbody = GetComponent<Rigidbody2D>();
+        _aiMovement = GetComponent<AiMovement>();
     }
 
     private void Update()
@@ -52,6 +54,11 @@ public class PreyCharacter : MonoBehaviour
     private void AnimMovement(float direction)
     {
         _animator.SetFloat("x", Mathf.Abs(direction));
+
+        if (_aiMovement.InJump)
+        {
+            _animator.SetTrigger("jump");
+        }
 
         if (direction > 0)
         {
