@@ -19,8 +19,6 @@ public class AiInput : MonoBehaviour
     private float stateChangeTime;
     private float lastCooldownTime;
 
-    private bool facingLeft = false;
-
     public float horizontalSpeed;
     public float verticalSpeed;
     public bool jump;
@@ -50,41 +48,52 @@ public class AiInput : MonoBehaviour
         switch (myState)
         {
             case AiState.Idle:
-                if(SeePlayer()) React();
-                else if(Time.time - stateChangeTime > lastCooldownTime)
+                if (SeePlayer())
                 {
-                    facingLeft = Random.value > 0.5;
-                    var speed = facingLeft? -1 : 1; // -Mathf.Abs(transform.localScale.x) : Mathf.Abs(transform.localScale.x);
-
-                    SwitchState(speed, 1 + 2 * Random.value, AiState.Walking);
+                    React();
+                }
+                else if (Time.time - stateChangeTime > lastCooldownTime)
+                {
+                    horizontalSpeed = Random.value > 0.5 ? -1 : 1;
+                    SwitchState(1 + 2 * Random.value, AiState.Walking);
                 }
                 break;
 
             case AiState.Walking:
-                if (SeePlayer()) React();
-                else if (Time.time - stateChangeTime > lastCooldownTime) SwitchState(0, 1 * Random.value, AiState.Idle);
+                if (SeePlayer())
+                {
+                    React();
+                }
+                else if (Time.time - stateChangeTime > lastCooldownTime)
+                {
+                    horizontalSpeed = 0;
+                    SwitchState(1 + 1 * Random.value, AiState.Idle);
+                }
                 break;
 
             case AiState.Fleeing:
-                horizontalSpeed = player.transform.position.x < transform.position.x ? 1 : -1;
-                if(Time.time - stateChangeTime > lastCooldownTime)
+
+                if (SeePlayer())
                 {
-                    facingLeft = !facingLeft;
-                    SwitchState(0, 1 + 3 * Random.value, AiState.Idle);
+                    horizontalSpeed = player.transform.position.x < transform.position.x ? 1 : -1;
+                    jump = !jump;
                 }
-                else jump = !jump;
+                else
+                {
+                    horizontalSpeed = 0;
+                    SwitchState(1 + 3 * Random.value, AiState.Idle);
+                }
                 break;
 
             case AiState.SeekingShelter:
-                facingLeft = chosenShelter.position.x < transform.position.x;
-                horizontalSpeed = facingLeft ? -1 : 1; //-Mathf.Abs(transform.localScale.x) : Mathf.Abs(transform.localScale.x);
+                horizontalSpeed = chosenShelter.position.x < transform.position.x ? -1 : 1; //-Mathf.Abs(transform.localScale.x) : Mathf.Abs(transform.localScale.x);
 
                 if (Mathf.Abs(chosenShelter.position.x - transform.position.x) < Mathf.Abs(transform.localScale.x) / 2)
                 {
                     horizontalSpeed = 0;
                     if (Mathf.Abs(chosenShelter.position.y - transform.position.y) < Mathf.Abs(transform.localScale.y) / 2)
                         {
-                        SwitchState(0, 5 + 5 * Random.value, AiState.Hiding);
+                        SwitchState(5 + 5 * Random.value, AiState.Hiding);
                     }
                     else if(chosenShelter.position.y > transform.position.y)
                     {
@@ -103,7 +112,7 @@ public class AiInput : MonoBehaviour
                 {
                     GetComponent<BoxCollider2D>().enabled = true;
                     GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
-                    SwitchState(0, 3 * Random.value, AiState.Idle);
+                    SwitchState(3 * Random.value, AiState.Idle);
                 }
                 break;
         }
@@ -114,9 +123,7 @@ public class AiInput : MonoBehaviour
         switch (myType)
         {
             case AiType.Jumping:
-                facingLeft = !facingLeft;
-                var speed = facingLeft ? -1 : 1; //3 * -Mathf.Abs(transform.localScale.x) : 3 * Mathf.Abs(transform.localScale.x);
-                SwitchState(speed, 2 + 2 * Random.value, AiState.Fleeing);
+                SwitchState(2 + 2 * Random.value, AiState.Fleeing);
                 break;
             case AiType.Hiding:
                 if (shelterList != null && shelterList.Count > 0)
@@ -125,16 +132,13 @@ public class AiInput : MonoBehaviour
                     List<Transform> sorted = shelterList.OrderBy(o => Mathf.Abs(o.position.x - transform.position.x)).ToList();
                     chosenShelter = sorted[0];
                 }
-                facingLeft = chosenShelter.position.x < transform.position.x;
-                var speed2 = facingLeft ? -1 : 1; // 3 * -Mathf.Abs(transform.localScale.x) : 3 * Mathf.Abs(transform.localScale.x);
-                SwitchState(speed2, 30, AiState.SeekingShelter);
+                SwitchState(30, AiState.SeekingShelter);
                 break;
         }
     }
 
-    private void SwitchState(float speed, float time, AiState targetState)
+    private void SwitchState(float time, AiState targetState)
     {
-        horizontalSpeed = speed;
         lastCooldownTime = time;
         myState = targetState;
     }
@@ -152,6 +156,7 @@ public class AiInput : MonoBehaviour
         bool directionOk = Mathf.Abs(player.transform.position.x - transform.position.x) < Mathf.Abs(transform.localScale.x) * 10;
            // (facingLeft && player.transform.position.x < transform.position.x && Mathf.Abs(player.transform.position.x - transform.position.x) < Mathf.Abs(transform.localScale.x) * 10) ||
             // (!facingLeft && player.transform.position.x > transform.position.x && Mathf.Abs(player.transform.position.x - transform.position.x) < Mathf.Abs(transform.localScale.x) * 10);
+
         //Vector3 targetDirection = (player.transform.position - transform.position).normalized;
         //RaycastHit2D hit = Physics2D.Raycast(transform.position, targetDirection);
 
