@@ -90,10 +90,10 @@ public class BlobProgressBarEat : MonoBehaviour
 
     private IEnumerator Flash()
     {
-        _background.color = Color.red;
-        while(_background.color.r > 0)
+        _background.color = Color.green;
+        while(_background.color.g > 0)
         {
-            _background.color = new Color(_background.color.r - 0.05f, 0, 0);
+            _background.color = new Color(0, _background.color.g - 0.05f, 0);
             yield return new WaitForSeconds(0.05f);
            //  Debug.Log(_background.color);
         }

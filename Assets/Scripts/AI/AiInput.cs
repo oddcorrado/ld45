@@ -23,11 +23,16 @@ public class AiInput : MonoBehaviour
     public float verticalSpeed;
     public bool jump;
     public bool dive;
+    public float jumpiness = 0.5f;
+    PlayerMovementGroundSticky playerMovementGroundSticky;
+    PreyStats preyStats;
 
     private void Start()
     {
         myState = AiState.Idle;
         player = GameObject.Find("BlobSticky").transform;
+        playerMovementGroundSticky = player.GetComponent<PlayerMovementGroundSticky>();
+        preyStats = GetComponent<PreyStats>();
 
         var shelters = FindObjectsOfType<Shelter>();
         foreach (var s in shelters) shelterList.Add(s.transform);
@@ -76,7 +81,9 @@ public class AiInput : MonoBehaviour
                 if (SeePlayer())
                 {
                     horizontalSpeed = player.transform.position.x < transform.position.x ? 1 : -1;
-                    jump = !jump;
+                    // jump = !jump;
+                    if (Random.value < jumpiness) jump = true;
+                    else jump = false;
                 }
                 else
                 {
@@ -153,6 +160,7 @@ public class AiInput : MonoBehaviour
 
     private bool SeePlayer()
     {
+        // if (playerMovementGroundSticky.SizeMul < preyStats.SizeMulMin) return false;
         bool directionOk = Mathf.Abs(player.transform.position.x - transform.position.x) < Mathf.Abs(transform.localScale.x) * 10;
            // (facingLeft && player.transform.position.x < transform.position.x && Mathf.Abs(player.transform.position.x - transform.position.x) < Mathf.Abs(transform.localScale.x) * 10) ||
             // (!facingLeft && player.transform.position.x > transform.position.x && Mathf.Abs(player.transform.position.x - transform.position.x) < Mathf.Abs(transform.localScale.x) * 10);

@@ -53,11 +53,16 @@ public class PreyCharacter : MonoBehaviour
 
     private void AnimMovement(float direction)
     {
-        _animator.SetFloat("x", Mathf.Abs(direction));
+        
 
-        if (_aiMovement.InJump)
+        if (!_aiMovement.IsGrounded)
         {
-            _animator.SetTrigger("jump");
+            _animator.SetFloat("x", 2.5f);
+            // _animator.SetTrigger("jump");
+        }
+        else
+        {
+            _animator.SetFloat("x", Mathf.Abs(direction) > 0 ? 0.5f : 0);
         }
 
         if (direction > 0)

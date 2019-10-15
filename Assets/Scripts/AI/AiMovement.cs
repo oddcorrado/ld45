@@ -120,10 +120,12 @@ public class AiMovement : AiMovementBase
                 var angle = Mathf.Rad2Deg * Mathf.Atan2(Normal.y, Normal.x) - 90;
                 Debug.DrawLine(transform.position, transform.position + new Vector3(Normal.x, Normal.y, 0) * 10, Color.yellow);
                 newVel = Quaternion.Euler(0, 0, angle) * new Vector3(walkGroundSpeed * hor, 0, 0);
+                if (name == "Mouse") Debug.Log("newVel " + newVel);
                 // Debug.DrawLine(transform.position + new Vector3(0, 0.2f, 0), transform.position + new Vector3(0, 0.2f, 0) + new Vector3(vel.x, vel.y, 0), Color.red);
                 Debug.DrawLine(transform.position, transform.position + new Vector3(newVel.x, newVel.y, 0), Color.white);
                 var gi = groundInertia <= Mathf.Epsilon ? 0f : 0.9f + groundInertia * 0.01f;
                 vel.x = newVel.x * (1 - gi) + vel.x * gi;
+                if (name == "Mouse") Debug.Log("vel.x " + vel);
                 // body.AddForce(new Vector2(newVel.x, 0));
 
                 if (Mathf.Abs(angle) > 2)
@@ -310,6 +312,7 @@ public class AiMovement : AiMovementBase
             {
                 //horLock = 0;
                 vel = Horizontal(vel, 0);
+                if (name == "Mouse") Debug.Log("Horizontal " + vel);
             }
             else
             {
@@ -327,6 +330,7 @@ public class AiMovement : AiMovementBase
         prevJ = input.jump;
         // Debug.Log(name + "/" + IsGrounded + "/" + IsWalled);
         // Debug.Log(jumpLeft);
+        if (name == "Mouse") Debug.Log("final vel " + vel);
         body.velocity = vel;
     }
 }
